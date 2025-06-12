@@ -7,7 +7,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Matías Jaubet</h3>
             <p className="text-gray-400">
               Desarrollador Web Full Stack especializado en crear experiencias
-              digitales únicas y funcionales.
+              digitales únicas y funcionales.1
             </p>
           </div>
           <div>
