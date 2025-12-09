@@ -56,7 +56,7 @@ export async function POST(request: Request) {
 
         const mailOptions = {
             from: `"Web Matias Jaubet" <${process.env.SMTP_USER}>`,
-            to: "hola@matiasjaubet.com",
+            to: "matias@jaubet.com",
             replyTo: email,
             subject: `Nuevo contacto web de: ${name}`,
             html: `
