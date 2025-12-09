@@ -12,7 +12,7 @@
         "title_start": "Webs que Venden.",
         "title_grad": "IA que Trabaja.",
         "desc": "Combinamos desarrollo web sólido con Inteligencia Artificial para reducir costos, tiempos y dolores de cabeza. Vos ocupate del negocio, la tecnología es problema mío.",
-        "cta_primary": "Hablemos por WhatsApp",
+        "cta_primary": "Empezar ahora",
         "cta_secondary": "Ver trabajos realizados"
     },
     "PainPoints": {
@@ -118,7 +118,7 @@
                 "category": "Chatbot & IA",
                 "title": "Burger King Local (Franquicia)",
                 "stats": "+45% Pedidos Automáticos",
-                "desc": "Se perdían pedidos en WhatsApp por demoras en contestar. Implementamos un bot que toma el pedido, confirma y envía a cocina."
+                "desc": "Se perdían pedidos por demoras en contestar. Implementamos un bot que toma el pedido, confirma y envía a cocina."
             },
             "3": {
                 "category": "Automatización",
@@ -193,10 +193,10 @@
         }
     },
     "Footer": {
-        "desc": "Desarrollador Full Stack & Especialista en Automatización. Ayudo a negocios a escalar con tecnología real.",
+        "desc": "Desarrollador Front End & Especialista en Automatización. Ayudo a negocios a escalar con tecnología real.",
         "rights": "Matías Web & IA. Todos los derechos reservados.",
         "form_title": "¿Hablamos?",
-        "form_subtitle": "Dejame tus datos y te escribo por WhatsApp. Sin compromiso.",
+        "form_subtitle": "Dejame tus datos y te escribo. Sin compromiso.",
         "label_name": "Nombre",
         "label_email": "Correo Electrónico",
         "label_whatsapp": "WhatsApp / Móvil",

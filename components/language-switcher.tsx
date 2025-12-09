@@ -22,7 +22,7 @@ export function LanguageSwitcher() {
             onClick={toggleLanguage}
             className="font-mono text-xs uppercase"
         >
-            {locale}
+            {locale === "es" ? "en" : "es"}
         </Button>
     )
 }

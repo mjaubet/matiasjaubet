@@ -38,7 +38,7 @@ export function Hero() {
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                     <Button size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
-                        <a href="https://wa.me/your-number" target="_blank">
+                        <a href="#contact">
                             {t("cta_primary")} <ArrowRight className="ml-2 w-4 h-4" />
                         </a>
                     </Button>

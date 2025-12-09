@@ -40,7 +40,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link href="/" className="text-xl font-bold flex items-center gap-2">
-                        <span className="text-gradient">Matías</span>
+                        <span className="text-gradient">Matias Jaubet</span>
                         <span className="text-white/80 font-light">{t("brand_subtitle")}</span>
                     </Link>
 
