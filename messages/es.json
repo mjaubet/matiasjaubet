@@ -197,9 +197,29 @@
         "rights": "Matías Web & IA. Todos los derechos reservados.",
         "form_title": "¿Hablamos?",
         "form_subtitle": "Dejame tus datos y te escribo por WhatsApp. Sin compromiso.",
-        "placeholder_name": "Nombre",
-        "placeholder_whatsapp": "WhatsApp",
-        "placeholder_message": "¿Qué necesitás?",
-        "start_cta": "Enviar Mensaje"
+        "label_name": "Nombre",
+        "label_email": "Correo Electrónico",
+        "label_whatsapp": "WhatsApp / Móvil",
+        "label_country": "País",
+        "label_need": "¿Qué necesitás?",
+        "placeholder_name": "Tu nombre",
+        "placeholder_email": "tu@email.com",
+        "placeholder_whatsapp": "+54 9 11...",
+        "placeholder_country": "Argentina",
+        "placeholder_need": "Contame brevemente tu proyecto...",
+        "submit": "Enviar Mensaje",
+        "submitting": "Enviando...",
+        "success_title": "¡Mensaje Enviado!",
+        "success_desc": "Te voy a estar contactando a la brevedad.",
+        "error_title": "Error",
+        "error_desc": "Hubo un problema al enviar el mensaje. Intenta nuevamente.",
+        "errors": {
+            "name_required": "El nombre es requerido",
+            "email_required": "El email es requerido",
+            "email_invalid": "Email inválido",
+            "whatsapp_required": "El WhatsApp es requerido",
+            "country_required": "El país es requerido",
+            "need_required": "Contame qué necesitás"
+        }
     }
 }

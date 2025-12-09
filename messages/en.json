@@ -197,9 +197,29 @@
         "rights": "Matías Web & IA. All rights reserved.",
         "form_title": "Let's Talk?",
         "form_subtitle": "Leave me your details and I'll write you on WhatsApp. No obligation.",
-        "placeholder_name": "Name",
-        "placeholder_whatsapp": "WhatsApp",
-        "placeholder_message": "What do you need?",
-        "start_cta": "Send Message"
+        "label_name": "Name",
+        "label_email": "Email",
+        "label_whatsapp": "WhatsApp / Mobile",
+        "label_country": "Country",
+        "label_need": "What do you need?",
+        "placeholder_name": "Your name",
+        "placeholder_email": "you@email.com",
+        "placeholder_whatsapp": "+1 555...",
+        "placeholder_country": "USA",
+        "placeholder_need": "Tell me briefly about your project...",
+        "submit": "Send Message",
+        "submitting": "Sending...",
+        "success_title": "Message Sent!",
+        "success_desc": "I will be contacting you shortly.",
+        "error_title": "Error",
+        "error_desc": "There was a problem sending the message. Please try again.",
+        "errors": {
+            "name_required": "Name is required",
+            "email_required": "Email is required",
+            "email_invalid": "Invalid email",
+            "whatsapp_required": "WhatsApp is required",
+            "country_required": "Country is required",
+            "need_required": "Tell me what you need"
+        }
     }
 }

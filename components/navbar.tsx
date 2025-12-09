@@ -57,9 +57,9 @@ export function Navbar() {
                         ))}
                         <LanguageSwitcher />
                         <Button asChild>
-                            <a href="https://wa.me/your-number" target="_blank">
+                            <Link href="#contact">
                                 {t("cta")}
-                            </a>
+                            </Link>
                         </Button>
                     </div>
 
@@ -91,9 +91,9 @@ export function Navbar() {
                             </a>
                         ))}
                         <Button className="w-full" asChild>
-                            <a href="https://wa.me/your-number" target="_blank">
+                            <Link href="#contact" onClick={() => setIsOpen(false)}>
                                 {t("cta")}
-                            </a>
+                            </Link>
                         </Button>
                     </div>
                 </div>

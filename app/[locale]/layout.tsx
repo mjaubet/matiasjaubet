@@ -13,7 +13,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-    title: "Matías Web & IA | Tu Socio Tecnológico",
+    title: "Matias Jaubet | Web & IA",
     description: "Desarrollo web y automatización con IA para potenciar tu negocio.",
 };
 
