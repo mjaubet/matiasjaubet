@@ -26,10 +26,10 @@ export function Footer() {
                             {t("desc")}
                         </p>
                         <div className="flex gap-4">
-                            <Link href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
+                            <Link href="https://www.linkedin.com/in/jaubet/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
                                 <Linkedin className="w-5 h-5 text-white/70" />
                             </Link>
-                            <Link href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
+                            <Link href="https://github.com/matiasjaubet/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
                                 <Github className="w-5 h-5 text-white/70" />
                             </Link>
                         </div>
