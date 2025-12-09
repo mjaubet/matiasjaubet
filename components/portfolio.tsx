@@ -37,7 +37,7 @@ export function Portfolio() {
     ]
 
     return (
-        <Section id="portfolio" className="bg-white/5 border-y border-white/5">
+        <Section id="portfolio" className="">
             <AnimationWrapper variant="fadeIn">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div>

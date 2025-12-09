@@ -15,13 +15,13 @@ export function Footer() {
     return (
         <footer className="border-t border-white/10 bg-[#050505] relative z-10">
             <AnimationWrapper variant="fadeIn">
-                <Section className="py-12 md:py-16">
+                <Section className="py-8">
                     <div className="grid md:grid-cols-2 gap-12 items-start">
 
                         {/* Brand & Social */}
                         <div className="space-y-6">
                             <Link href="/" className="text-2xl font-bold flex items-center gap-2">
-                                <span className="text-gradient">Matias Jaubet</span>
+                                <span className="text-gradient">Matías Jaubet</span>
                                 <span className="text-white/80 font-light">Web & IA</span>
                             </Link>
                             <p className="text-white/60 max-w-sm">
@@ -46,9 +46,9 @@ export function Footer() {
 
             {/* Copyright Bar */}
             <div className="border-t border-white/10 bg-black/30">
-                <Section className="py-2">
+                <Section className="py-2 md:!py-12">
                     <div className="text-sm text-white/40 text-center">
-                        © {new Date().getFullYear()} Matías Web & IA. Todos los derechos reservados.
+                        &copy; {new Date().getFullYear()} Matías Web & IA. Todos los derechos reservados.
                     </div>
                 </Section>
             </div>

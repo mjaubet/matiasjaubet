@@ -16,7 +16,7 @@ export function Navbar() {
 
     const navLinks = [
         { name: t("services"), href: "/servicios", isAnchor: false },
-        { name: t("process"), href: "#proceso", isAnchor: true },
+        { name: t("process"), href: "/proceso", isAnchor: false },
         { name: t("faq"), href: "/preguntas-frecuentes", isAnchor: false },
     ]
 
@@ -39,7 +39,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link href="/" className="text-xl font-bold flex items-center gap-2">
-                        <span className="text-gradient">Matias Jaubet</span>
+                        <span className="text-gradient">Matías Jaubet</span>
                         <span className="text-white/80 font-light">{t("brand_subtitle")}</span>
                     </Link>
 
