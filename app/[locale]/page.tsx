@@ -1,13 +1,14 @@
 
+
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { PainPoints } from "@/components/pain-points"
 import { Services } from "@/components/services"
-import { Pricing } from "@/components/pricing"
 import { Portfolio } from "@/components/portfolio"
 import { Process } from "@/components/process"
-import { TestimonialsAndFAQ } from "@/components/testimonials-faq"
+import { Testimonials } from "@/components/testimonials"
 import { Footer } from "@/components/footer"
+
 
 export default function Home() {
   return (
@@ -24,9 +25,8 @@ export default function Home() {
         <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
 
         <Portfolio />
-        <Pricing />
         <Process />
-        <TestimonialsAndFAQ />
+        <Testimonials />
       </div>
 
       <Footer />

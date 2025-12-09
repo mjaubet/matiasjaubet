@@ -15,10 +15,9 @@ export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false)
 
     const navLinks = [
-        { name: t("services"), href: "#servicios" },
-        { name: t("plans"), href: "#planes" },
-        { name: t("process"), href: "#proceso" },
-        { name: t("faq"), href: "#faq" },
+        { name: t("services"), href: "/servicios", isAnchor: false },
+        { name: t("process"), href: "#proceso", isAnchor: true },
+        { name: t("faq"), href: "/preguntas-frecuentes", isAnchor: false },
     ]
 
     useEffect(() => {
@@ -47,13 +46,23 @@ export function Navbar() {
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            <a // Changed to 'a' for anchor links to work on same page without route change
-                                key={link.name}
-                                href={link.href}
-                                className="text-sm font-medium text-white/70 hover:text-white transition-colors cursor-pointer"
-                            >
-                                {link.name}
-                            </a>
+                            link.isAnchor ? (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-sm font-medium text-white/70 hover:text-white transition-colors cursor-pointer"
+                                >
+                                    {link.name}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-sm font-medium text-white/70 hover:text-white transition-colors cursor-pointer"
+                                >
+                                    {link.name}
+                                </Link>
+                            )
                         ))}
                         <LanguageSwitcher />
                         <Button asChild>
@@ -81,14 +90,25 @@ export function Navbar() {
                 <div className="md:hidden bg-[#0a0a0a] border-b border-white/10">
                     <div className="px-6 py-4 space-y-4 flex flex-col">
                         {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className="text-sm font-medium text-white/70 hover:text-white py-2"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {link.name}
-                            </a>
+                            link.isAnchor ? (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-sm font-medium text-white/70 hover:text-white py-2"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.name}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-sm font-medium text-white/70 hover:text-white py-2"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                            )
                         ))}
                         <Button className="w-full" asChild>
                             <Link href="#contact" onClick={() => setIsOpen(false)}>

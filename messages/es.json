@@ -60,6 +60,10 @@
             }
         }
     },
+    "ServicesPage": {
+        "meta_title": "Servicios | Matías Web & IA",
+        "meta_description": "Desarrollo web profesional, chatbots inteligentes, automatización y hosting. Soluciones tecnológicas reales sin tecnicismos para hacer crecer tu negocio."
+    },
     "Pricing": {
         "title_start": "Inversión",
         "title_grad": "Clara y Transparente",
@@ -156,6 +160,7 @@
         "testimonials_title_grad": "mis clientes",
         "faq_title_start": "Preguntas",
         "faq_title_grad": "Frecuentes",
+        "faq_subtitle": "Resuelvo las dudas más comunes para que puedas decidir con confianza.",
         "testimonials": {
             "1": {
                 "quote": "Matías siempre contesta. Eso para mí vale oro. La web quedó increíble y se pagó sola en dos meses.",
@@ -171,6 +176,21 @@
                 "quote": "Rápido, prolijo y sin vueltas. Entendió mi negocio mejor que yo.",
                 "author": "Martín G.",
                 "role": "Arquitecto"
+            },
+            "4": {
+                "quote": "La automatización que implementó me ahorra 15 horas por semana. Ahora puedo enfocarme en lo que realmente importa.",
+                "author": "Carolina P.",
+                "role": "Dueña de E-commerce"
+            },
+            "5": {
+                "quote": "Pensé que iba a ser complicado, pero Matías lo hizo simple. El sistema funciona perfecto y mis clientes están felices.",
+                "author": "Diego R.",
+                "role": "Consultor Financiero"
+            },
+            "6": {
+                "quote": "Mejor inversión que hice este año. La web genera leads 24/7 y el bot responde al instante. Mis ventas subieron un 60%.",
+                "author": "Laura F.",
+                "role": "Coach de Negocios"
             }
         },
         "faqs": {
@@ -221,5 +241,9 @@
             "country_required": "El país es requerido",
             "need_required": "Contame qué necesitás"
         }
+    },
+    "FAQ": {
+        "meta_title": "Preguntas Frecuentes | Matías Web & IA",
+        "meta_description": "Resuelvo tus dudas sobre desarrollo web, chatbots, automatización y más. Todo lo que necesitás saber antes de empezar tu proyecto."
     }
 }

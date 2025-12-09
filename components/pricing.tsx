@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
 import { Check } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { motion } from "framer-motion"
+import { AnimationWrapper, StaggerContainer, staggerItem } from "@/components/ui/animation-wrapper"
 
 export function Pricing() {
     const t = useTranslations("Pricing")
@@ -52,47 +54,50 @@ export function Pricing() {
 
     return (
         <Section id="planes">
-            <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                    {t("title_start")} <span className="text-gradient">{t("title_grad")}</span>
-                </h2>
-                <p className="text-white/60 max-w-2xl mx-auto text-lg">
-                    {t("desc")}
-                </p>
-            </div>
+            <AnimationWrapper variant="fadeIn">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                        {t("title_start")} <span className="text-gradient">{t("title_grad")}</span>
+                    </h2>
+                    <p className="text-white/60 max-w-2xl mx-auto text-lg">
+                        {t("desc")}
+                    </p>
+                </div>
+            </AnimationWrapper>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <StaggerContainer className="grid md:grid-cols-3 gap-8">
                 {plans.map((plan, idx) => (
-                    <Card
-                        key={idx}
-                        className={`flex flex-col relative ${plan.popular ? 'border-purple-500/50 bg-purple-500/5' : 'border-white/10'}`}
-                    >
-                        {plan.popular && (
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                                {t("popular")}
-                            </div>
-                        )}
-
-                        <div className="mb-8">
-                            <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                            <p className="text-white/60 text-sm h-10">{plan.desc}</p>
-                        </div>
-
-                        <div className="space-y-4 mb-8 flex-1">
-                            {plan.features.map((feat, i) => (
-                                <div key={i} className="flex items-start gap-3 text-sm">
-                                    <Check className="w-5 h-5 text-emerald-400 shrink-0" />
-                                    <span className="text-white/80">{feat}</span>
+                    <motion.div key={idx} variants={staggerItem}>
+                        <Card
+                            className={`flex flex-col relative ${plan.popular ? 'border-purple-500/50 bg-purple-500/5' : 'border-white/10'}`}
+                        >
+                            {plan.popular && (
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                    {t("popular")}
                                 </div>
-                            ))}
-                        </div>
+                            )}
 
-                        <Button variant={plan.popular ? 'primary' : 'glass'} className="w-full">
-                            {t("cta")}
-                        </Button>
-                    </Card>
+                            <div className="mb-8">
+                                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                                <p className="text-white/60 text-sm h-10">{plan.desc}</p>
+                            </div>
+
+                            <div className="space-y-4 mb-8 flex-1">
+                                {plan.features.map((feat, i) => (
+                                    <div key={i} className="flex items-start gap-3 text-sm">
+                                        <Check className="w-5 h-5 text-emerald-400 shrink-0" />
+                                        <span className="text-white/80">{feat}</span>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <Button variant={plan.popular ? 'primary' : 'glass'} className="w-full">
+                                {t("cta")}
+                            </Button>
+                        </Card>
+                    </motion.div>
                 ))}
-            </div>
+            </StaggerContainer>
         </Section>
     )
 }

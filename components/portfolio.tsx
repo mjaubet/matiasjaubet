@@ -6,6 +6,8 @@ import { Section } from "@/components/ui/section"
 import { ArrowUpRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/routing"
+import { motion } from "framer-motion"
+import { AnimationWrapper, StaggerContainer, staggerItem } from "@/components/ui/animation-wrapper"
 
 export function Portfolio() {
     const t = useTranslations("Portfolio")
@@ -36,41 +38,45 @@ export function Portfolio() {
 
     return (
         <Section id="portfolio" className="bg-white/5 border-y border-white/5">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                        {t("title_start")} <span className="text-gradient">{t("title_grad")}</span>
-                    </h2>
-                    <p className="text-white/60 max-w-xl">
-                        {t("desc")}
-                    </p>
+            <AnimationWrapper variant="fadeIn">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                            {t("title_start")} <span className="text-gradient">{t("title_grad")}</span>
+                        </h2>
+                        <p className="text-white/60 max-w-xl">
+                            {t("desc")}
+                        </p>
+                    </div>
+                    <Link href="#" className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
+                        {t("link")} <ArrowUpRight className="w-4 h-4" />
+                    </Link>
                 </div>
-                <Link href="#" className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
-                    {t("link")} <ArrowUpRight className="w-4 h-4" />
-                </Link>
-            </div>
+            </AnimationWrapper>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <StaggerContainer className="grid md:grid-cols-3 gap-6">
                 {cases.map((c, idx) => (
-                    <Card key={idx} className="group overflow-hidden border-0 bg-neutral-900/50">
-                        {/* Color banner */}
-                        <div className={`h-2 w-full bg-gradient-to-r ${c.color}`} />
+                    <motion.div key={idx} variants={staggerItem}>
+                        <Card className="group overflow-hidden border-0 bg-neutral-900/50 h-full">
+                            {/* Color banner */}
+                            <div className={`h-2 w-full bg-gradient-to-r ${c.color}`} />
 
-                        <div className="p-2">
-                            <div className="text-xs font-medium text-white/40 mb-2 uppercase tracking-wide">{c.category}</div>
-                            <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">{c.title}</h3>
+                            <div className="p-2">
+                                <div className="text-xs font-medium text-white/40 mb-2 uppercase tracking-wide">{c.category}</div>
+                                <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">{c.title}</h3>
 
-                            <div className="mb-4 inline-block px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-white/90">
-                                🚀 {c.stats}
+                                <div className="mb-4 inline-block px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-white/90">
+                                    🚀 {c.stats}
+                                </div>
+
+                                <p className="text-white/60 text-sm leading-relaxed">
+                                    {c.desc}
+                                </p>
                             </div>
-
-                            <p className="text-white/60 text-sm leading-relaxed">
-                                {c.desc}
-                            </p>
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
                 ))}
-            </div>
+            </StaggerContainer>
         </Section>
     )
 }

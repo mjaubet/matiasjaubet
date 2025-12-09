@@ -17,26 +17,57 @@ export function Hero() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full -z-10" />
 
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial="hidden"
+                animate="visible"
+                variants={{
+                    hidden: {},
+                    visible: {
+                        transition: {
+                            staggerChildren: 0.15
+                        }
+                    }
+                }}
                 className="space-y-6 max-w-3xl"
             >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-white/80">
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        visible: { opacity: 1, y: 0 }
+                    }}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-white/80"
+                >
                     <Sparkles className="w-4 h-4 text-purple-400" />
                     <span>{t("badge")}</span>
-                </div>
+                </motion.div>
 
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+                <motion.h1
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        visible: { opacity: 1, y: 0 }
+                    }}
+                    className="text-5xl md:text-7xl font-bold tracking-tight leading-tight"
+                >
                     {t("title_start")} <br />
                     <span className="text-gradient">{t("title_grad")}</span>
-                </h1>
+                </motion.h1>
 
-                <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+                <motion.p
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        visible: { opacity: 1, y: 0 }
+                    }}
+                    className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed"
+                >
                     {t("desc")}
-                </p>
+                </motion.p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        visible: { opacity: 1, y: 0 }
+                    }}
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
+                >
                     <Button size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
                         <a href="#contact">
                             {t("cta_primary")} <ArrowRight className="ml-2 w-4 h-4" />
@@ -47,7 +78,7 @@ export function Hero() {
                             {t("cta_secondary")}
                         </a>
                     </Button>
-                </div>
+                </motion.div>
             </motion.div>
         </Section>
     )
