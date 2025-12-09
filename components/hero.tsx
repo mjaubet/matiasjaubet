@@ -1,0 +1,52 @@
+
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { Section } from "@/components/ui/section"
+import { ArrowRight, Sparkles } from "lucide-react"
+import { motion } from "framer-motion"
+import Link from "next/link"
+
+export function Hero() {
+    return (
+        <Section className="pt-32 md:pt-48 pb-16 min-h-[90vh] flex flex-col justify-center items-center text-center relative overflow-hidden">
+            {/* Background Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full -z-10" />
+
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-6 max-w-3xl"
+            >
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-white/80">
+                    <Sparkles className="w-4 h-4 text-purple-400" />
+                    <span>Tu socio tecnológico que te resuelve la vida</span>
+                </div>
+
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+                    Webs que Venden. <br />
+                    <span className="text-gradient">IA que Trabaja.</span>
+                </h1>
+
+                <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+                    Combinamos desarrollo web sólido con Inteligencia Artificial para reducir costos, tiempos y dolores de cabeza.
+                    Vos ocupate del negocio, la tecnología es problema mío.
+                </p>
+
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <Button size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
+                        <Link href="https://wa.me/your-number" target="_blank">
+                            Hablemos por WhatsApp <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </Button>
+                    <Button variant="glass" size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
+                        <Link href="#portfolio">
+                            Ver trabajos realizados
+                        </Link>
+                    </Button>
+                </div>
+            </motion.div>
+        </Section>
+    )
+}
