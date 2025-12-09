@@ -2,39 +2,42 @@
 "use client"
 
 import { Section } from "@/components/ui/section"
-
-const steps = [
-    {
-        num: "01",
-        title: "Diagnóstico",
-        desc: "Charlamos 15 minutos. Me contás qué te duele y yo te digo si puedo curarlo. Sin vueltas."
-    },
-    {
-        num: "02",
-        title: "Propuesta",
-        desc: "Te paso un plan de acción y un precio cerrado. Nada de 'costos sorpresa' a mitad de camino."
-    },
-    {
-        num: "03",
-        title: "Ejecución",
-        desc: "Me pongo a trabajar. Vos seguí con lo tuyo. En pocos días te muestro avances reales."
-    },
-    {
-        num: "04",
-        title: "Entrega y Fiesta",
-        desc: "Te entrego todo funcionando, te enseño a usarlo y brindamos (virtualmente). No te abandono ahí."
-    }
-]
+import { useTranslations } from "next-intl"
 
 export function Process() {
+    const t = useTranslations("Process")
+
+    const steps = [
+        {
+            num: "01",
+            title: t("steps.1.title"),
+            desc: t("steps.1.desc")
+        },
+        {
+            num: "02",
+            title: t("steps.2.title"),
+            desc: t("steps.2.desc")
+        },
+        {
+            num: "03",
+            title: t("steps.3.title"),
+            desc: t("steps.3.desc")
+        },
+        {
+            num: "04",
+            title: t("steps.4.title"),
+            desc: t("steps.4.desc")
+        }
+    ]
+
     return (
         <Section id="proceso">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                    ¿Cómo <span className="text-gradient">Trabajamos?</span>
+                    {t("title_start")} <span className="text-gradient">{t("title_grad")}</span>
                 </h2>
                 <p className="text-white/60 max-w-2xl mx-auto text-lg">
-                    Simple, rápido y sin dolores de cabeza. Eliminé la burocracia para que podamos avanzar rápido.
+                    {t("desc")}
                 </p>
             </div>
 

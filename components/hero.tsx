@@ -5,9 +5,12 @@ import { Button } from "@/components/ui/button"
 import { Section } from "@/components/ui/section"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { motion } from "framer-motion"
-import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/routing"
 
 export function Hero() {
+    const t = useTranslations("Hero")
+
     return (
         <Section className="pt-32 md:pt-48 pb-16 min-h-[90vh] flex flex-col justify-center items-center text-center relative overflow-hidden">
             {/* Background Glow */}
@@ -21,29 +24,28 @@ export function Hero() {
             >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-white/80">
                     <Sparkles className="w-4 h-4 text-purple-400" />
-                    <span>Tu socio tecnológico que te resuelve la vida</span>
+                    <span>{t("badge")}</span>
                 </div>
 
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-                    Webs que Venden. <br />
-                    <span className="text-gradient">IA que Trabaja.</span>
+                    {t("title_start")} <br />
+                    <span className="text-gradient">{t("title_grad")}</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-                    Combinamos desarrollo web sólido con Inteligencia Artificial para reducir costos, tiempos y dolores de cabeza.
-                    Vos ocupate del negocio, la tecnología es problema mío.
+                    {t("desc")}
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                     <Button size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
-                        <Link href="https://wa.me/your-number" target="_blank">
-                            Hablemos por WhatsApp <ArrowRight className="ml-2 w-4 h-4" />
-                        </Link>
+                        <a href="https://wa.me/your-number" target="_blank">
+                            {t("cta_primary")} <ArrowRight className="ml-2 w-4 h-4" />
+                        </a>
                     </Button>
                     <Button variant="glass" size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
-                        <Link href="#portfolio">
-                            Ver trabajos realizados
-                        </Link>
+                        <a href="#portfolio">
+                            {t("cta_secondary")}
+                        </a>
                     </Button>
                 </div>
             </motion.div>

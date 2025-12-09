@@ -4,40 +4,43 @@
 import { Card } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
 import { Globe, Bot, Workflow, Server } from "lucide-react"
-
-const services = [
-    {
-        icon: Globe,
-        title: "Sitios Web Profesionales",
-        desc: "Tu vidriera digital abierta 24/7. Webs rápidas, seguras y autoadministrables. No dependés de mí para cambiar una foto."
-    },
-    {
-        icon: Bot,
-        title: "Chatbots & Atención 24/7",
-        desc: "Configuro bots inteligentes que responden dudas, agendan turnos y venden mientras vos dormís. Basta de perder clientes por no contestar."
-    },
-    {
-        icon: Workflow,
-        title: "Automatización (n8n)",
-        desc: "Empleados digitales que hacen el trabajo aburrido. Facturación, seguimiento de leads, posteos en redes... todo automático."
-    },
-    {
-        icon: Server,
-        title: "Hosting & Mantenimiento",
-        desc: "Yo me ocupo de que no se caiga nunca. Copias de seguridad, actualizaciones y seguridad para que duermas tranquilo."
-    }
-]
+import { useTranslations } from "next-intl"
 
 export function Services() {
+    const t = useTranslations("Services")
+
+    const services = [
+        {
+            icon: Globe,
+            title: t("cards.1.title"),
+            desc: t("cards.1.desc")
+        },
+        {
+            icon: Bot,
+            title: t("cards.2.title"),
+            desc: t("cards.2.desc")
+        },
+        {
+            icon: Workflow,
+            title: t("cards.3.title"),
+            desc: t("cards.3.desc")
+        },
+        {
+            icon: Server,
+            title: t("cards.4.title"),
+            desc: t("cards.4.desc")
+        }
+    ]
+
     return (
         <Section id="servicios" className="relative">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                    Soluciones Reales <br />
-                    <span className="text-gradient">Sin Tecnicismos</span>
+                    {t("title_start")} <br />
+                    <span className="text-gradient">{t("title_grad")}</span>
                 </h2>
                 <p className="text-white/60 max-w-2xl mx-auto text-lg">
-                    No te vendo código, te vendo tiempo libre y herramientas para facturar más.
+                    {t("desc")}
                 </p>
             </div>
 

@@ -4,34 +4,37 @@
 import { Card } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
 import { Clock, DollarSign, UserX } from "lucide-react"
-
-const pains = [
-    {
-        icon: Clock,
-        title: "Sitios lentos o caídos",
-        desc: "Perdés ventas cuando tu web no carga o se vive rompiendo en el peor momento."
-    },
-    {
-        icon: UserX,
-        title: "Developers fantasmas",
-        desc: "Empiezan el proyecto y desaparecen. O te hablan en chino cuando pedís un cambio."
-    },
-    {
-        icon: DollarSign,
-        title: "Presupuestos impagables",
-        desc: "Agencias que cotizan fortunas por webs que podrías tener funcionando en días."
-    }
-]
+import { useTranslations } from "next-intl"
 
 export function PainPoints() {
+    const t = useTranslations("PainPoints")
+
+    const pains = [
+        {
+            icon: Clock,
+            title: t("cards.1.title"),
+            desc: t("cards.1.desc")
+        },
+        {
+            icon: UserX,
+            title: t("cards.2.title"),
+            desc: t("cards.2.desc")
+        },
+        {
+            icon: DollarSign,
+            title: t("cards.3.title"),
+            desc: t("cards.3.desc")
+        }
+    ]
+
     return (
         <Section id="problema">
             <div className="text-center mb-12 space-y-4">
                 <h2 className="text-3xl md:text-4xl font-bold">
-                    ¿Cansado de renegar con <span className="text-red-400">la tecnología?</span>
+                    {t("title_start")} <span className="text-red-400">{t("title_highlight")}</span>
                 </h2>
                 <p className="text-white/60 max-w-xl mx-auto">
-                    Sé lo frustrante que es querer digitalizar tu negocio y encontrarte con trabas, demoras y costos ocultos.
+                    {t("desc")}
                 </p>
             </div>
 
@@ -50,9 +53,9 @@ export function PainPoints() {
             {/* The Solution Bridge */}
             <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-white/10 text-center relative overflow-hidden">
                 <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-2">Mi propuesta es simple:</h3>
+                    <h3 className="text-2xl font-bold mb-2">{t("solution_title")}</h3>
                     <p className="text-lg text-white/80">
-                        Soporte humano real, tecnología que escala y <span className="text-white font-semibold">precios lógicos gracias a la IA.</span>
+                        {t("solution_desc_start")} <span className="text-white font-semibold">{t("solution_desc_bold")}</span>
                     </p>
                 </div>
             </div>

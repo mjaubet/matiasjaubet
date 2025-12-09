@@ -4,9 +4,12 @@
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/ui/section"
 import { Github, Linkedin, Twitter } from "lucide-react"
-import Link from "next/link"
+import Link from "next/link" // Can use standard link for external/hash or use i18n link for internal. Using standard for simplicity on logo and externals.
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+    const t = useTranslations("Footer")
+
     return (
         <footer className="border-t border-white/10 bg-[#050505] relative z-10">
             <Section className="py-12 md:py-16">
@@ -19,8 +22,7 @@ export function Footer() {
                             <span className="text-white/80 font-light">Web & IA</span>
                         </Link>
                         <p className="text-white/60 max-w-sm">
-                            Desarrollador Full Stack & Especialista en Automatización.
-                            Ayudo a negocios a escalar con tecnología real.
+                            {t("desc")}
                         </p>
                         <div className="flex gap-4">
                             <Link href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
@@ -34,7 +36,7 @@ export function Footer() {
                             </Link>
                         </div>
                         <div className="text-sm text-white/30 pt-4">
-                            © {new Date().getFullYear()} Matías Web & IA. Todos los derechos reservados.
+                            © {new Date().getFullYear()} {t("rights")}
                         </div>
                     </div>
 
@@ -42,31 +44,31 @@ export function Footer() {
                     <div className="glass-card p-6 md:p-8 rounded-2xl relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 blur-[60px] rounded-full -z-10" />
 
-                        <h3 className="text-2xl font-bold mb-4">¿Hablamos?</h3>
+                        <h3 className="text-2xl font-bold mb-4">{t("form_title")}</h3>
                         <p className="text-white/60 mb-6 text-sm">
-                            Dejame tus datos y te escribo por WhatsApp. Sin compromiso.
+                            {t("form_subtitle")}
                         </p>
 
                         <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                             <div className="grid grid-cols-2 gap-4">
                                 <input
                                     type="text"
-                                    placeholder="Nombre"
+                                    placeholder={t("placeholder_name")}
                                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 transition-colors"
                                 />
                                 <input
                                     type="text"
-                                    placeholder="WhatsApp"
+                                    placeholder={t("placeholder_whatsapp")}
                                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 transition-colors"
                                 />
                             </div>
                             <textarea
-                                placeholder="¿Qué necesitás?"
+                                placeholder={t("placeholder_message")}
                                 rows={3}
                                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/50 transition-colors resize-none"
                             />
                             <Button className="w-full">
-                                Enviar Mensaje
+                                {t("start_cta")}
                             </Button>
                         </form>
                     </div>

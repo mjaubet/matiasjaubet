@@ -5,38 +5,59 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
 import { Check } from "lucide-react"
-
-const plans = [
-    {
-        name: "Despegue",
-        price: "Consultar",
-        desc: "Ideal para arrancar con el pie derecho. Tu presencia digital profesional.",
-        features: ["Landing Page One-Page", "Diseño Mobile First", "Formulario de Contacto", "Hosting incluido 1 año", "Dominio .com bonificado"]
-    },
-    {
-        name: "Profesional",
-        popular: true,
-        price: "Consultar",
-        desc: "Para negocios que quieren escalar. Web completa + Chatbot básico.",
-        features: ["Web Multipágina (Hasta 5)", "Chatbot de Respuestas Frecuentes", "Optimización SEO Básica", "Integración con WhatsApp", "Blog autoadministrable"]
-    },
-    {
-        name: "Automatizado",
-        price: "Consultar",
-        desc: "La máquina de ventas total. Web + IA + Automatizaciones.",
-        features: ["Web E-commerce o a medida", "Chatbot con IA (GPT-4)", "Automatización de Turnos/Leads", "Dashboard de Métricas", "Soporte Prioritario"]
-    }
-]
+import { useTranslations } from "next-intl"
 
 export function Pricing() {
+    const t = useTranslations("Pricing")
+
+    const plans = [
+        {
+            name: t("plans.1.name"),
+            price: t("cta"),
+            desc: t("plans.1.desc"),
+            features: [
+                t("plans.1.features.1"),
+                t("plans.1.features.2"),
+                t("plans.1.features.3"),
+                t("plans.1.features.4"),
+                t("plans.1.features.5")
+            ]
+        },
+        {
+            name: t("plans.2.name"),
+            popular: true,
+            price: t("cta"),
+            desc: t("plans.2.desc"),
+            features: [
+                t("plans.2.features.1"),
+                t("plans.2.features.2"),
+                t("plans.2.features.3"),
+                t("plans.2.features.4"),
+                t("plans.2.features.5")
+            ]
+        },
+        {
+            name: t("plans.3.name"),
+            price: t("cta"),
+            desc: t("plans.3.desc"),
+            features: [
+                t("plans.3.features.1"),
+                t("plans.3.features.2"),
+                t("plans.3.features.3"),
+                t("plans.3.features.4"),
+                t("plans.3.features.5")
+            ]
+        }
+    ]
+
     return (
         <Section id="planes">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                    Inversión <span className="text-gradient">Clara y Transparente</span>
+                    {t("title_start")} <span className="text-gradient">{t("title_grad")}</span>
                 </h2>
                 <p className="text-white/60 max-w-2xl mx-auto text-lg">
-                    La implementación de IA reduce tus costos operativos a largo plazo. Esto no es un gasto, es una inversión que se paga sola.
+                    {t("desc")}
                 </p>
             </div>
 
@@ -48,7 +69,7 @@ export function Pricing() {
                     >
                         {plan.popular && (
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                                Más Elegido
+                                {t("popular")}
                             </div>
                         )}
 
@@ -67,7 +88,7 @@ export function Pricing() {
                         </div>
 
                         <Button variant={plan.popular ? 'primary' : 'glass'} className="w-full">
-                            Solicitar Cotización
+                            {t("cta")}
                         </Button>
                     </Card>
                 ))}

@@ -1,0 +1,205 @@
+{
+    "Navbar": {
+        "brand_subtitle": "Web & AI",
+        "services": "Services",
+        "plans": "Plans",
+        "process": "Process",
+        "faq": "FAQ",
+        "cta": "Let's Talk"
+    },
+    "Hero": {
+        "badge": "Your tech partner that solves your life",
+        "title_start": "Webs that Sell.",
+        "title_grad": "AI that Works.",
+        "desc": "We combine solid web development with Artificial Intelligence to reduce costs, time, and headaches. You take care of the business, technology is my problem.",
+        "cta_primary": "Talk on WhatsApp",
+        "cta_secondary": "View Portfolio"
+    },
+    "PainPoints": {
+        "title_start": "Tired of struggling with",
+        "title_highlight": "technology?",
+        "desc": "I know how frustrating it is to want to digitize your business and encounter obstacles, delays, and hidden costs.",
+        "cards": {
+            "1": {
+                "title": "Slow or Down Sites",
+                "desc": "You lose sales when your website won't load or breaks at the worst moment."
+            },
+            "2": {
+                "title": "Ghost Developers",
+                "desc": "They start the project and disappear. Or speak in technical jargon when you ask for a change."
+            },
+            "3": {
+                "title": "Unaffordable Budgets",
+                "desc": "Agencies quoting fortunes for websites you could have running in days."
+            }
+        },
+        "solution_title": "My proposal is simple:",
+        "solution_desc_start": "Real human support, scalable technology, and",
+        "solution_desc_bold": "logical prices thanks to AI."
+    },
+    "Services": {
+        "title_start": "Real Solutions",
+        "title_grad": "No Jargon",
+        "desc": "I don't sell code, I sell free time and tools to bill more.",
+        "cards": {
+            "1": {
+                "title": "Professional Websites",
+                "desc": "Your digital storefront open 24/7. Fast, secure, and self-manageable webs. You don't depend on me to change a photo."
+            },
+            "2": {
+                "title": "Chatbots & 24/7 Support",
+                "desc": "I configure smart bots that answer questions, schedule appointments, and sell while you sleep. Stop losing clients by not answering."
+            },
+            "3": {
+                "title": "Automation (n8n)",
+                "desc": "Digital employees doing the boring work. Invoicing, lead tracking, social media posts... all automatic."
+            },
+            "4": {
+                "title": "Hosting & Maintenance",
+                "desc": "I ensure it never goes down. Backups, updates, and security so you sleep consistently."
+            }
+        }
+    },
+    "Pricing": {
+        "title_start": "Investment",
+        "title_grad": "Clear & Transparent",
+        "desc": "Implementing AI reduces your operating costs in the long run. This isn't an expense, it's an investment that pays for itself.",
+        "popular": "Most Popular",
+        "cta": "Request Quote",
+        "plans": {
+            "1": {
+                "name": "Liftoff",
+                "desc": "Ideal to start on the right foot. Your professional digital presence.",
+                "features": {
+                    "1": "One-Page Landing",
+                    "2": "Mobile First Design",
+                    "3": "Contact Form",
+                    "4": "Hosting included 1 year",
+                    "5": ".com Domain included"
+                }
+            },
+            "2": {
+                "name": "Professional",
+                "desc": "For businesses looking to scale. Full web + Basic Chatbot.",
+                "features": {
+                    "1": "Multi-page Web (Up to 5)",
+                    "2": "FAQ Chatbot",
+                    "3": "Basic SEO Optimization",
+                    "4": "WhatsApp Integration",
+                    "5": "Self-manageable Blog"
+                }
+            },
+            "3": {
+                "name": "Automated",
+                "desc": "The total sales machine. Web + AI + Automations.",
+                "features": {
+                    "1": "E-commerce or Custom Web",
+                    "2": "AI Chatbot (GPT-4)",
+                    "3": "Lead/Appointment Automation",
+                    "4": "Metrics Dashboard",
+                    "5": "Priority Support"
+                }
+            }
+        }
+    },
+    "Portfolio": {
+        "title_start": "Results",
+        "title_grad": "Real",
+        "desc": "No theory here. Just businesses billing more and owners sleeping better.",
+        "link": "View all projects",
+        "cases": {
+            "1": {
+                "category": "Institutional Web",
+                "title": "Law Firm López & Assoc.",
+                "stats": "Launched in 2 weeks",
+                "desc": "They needed seriousness and speed. We developed an institutional web transmitting trust and authority, with an integrated appointment system."
+            },
+            "2": {
+                "category": "Chatbot & AI",
+                "title": "Burger King Local (Franchise)",
+                "stats": "+45% Automatic Orders",
+                "desc": "Orders were lost on WhatsApp due to delay in answering. We implemented a bot that takes order, confirms, and sends to kitchen."
+            },
+            "3": {
+                "category": "Automation",
+                "title": "Horizonte Real Estate",
+                "stats": "0 Leads lost",
+                "desc": "We automated lead capture from portals. Now every inquiry receives immediate response and schedules in CRM alone."
+            }
+        }
+    },
+    "Process": {
+        "title_start": "How We",
+        "title_grad": "Work?",
+        "desc": "Simple, fast, and headache-free. I eliminated bureaucracy so we can move fast.",
+        "steps": {
+            "1": {
+                "title": "Diagnosis",
+                "desc": "We chat for 15 minutes. You tell me what hurts and I tell you if I can cure it. Straightforward."
+            },
+            "2": {
+                "title": "Proposal",
+                "desc": "I pass you an action plan and a closed price. No 'surprise costs' halfway through."
+            },
+            "3": {
+                "title": "Execution",
+                "desc": "I get to work. You continue with yours. In a few days I show you real progress."
+            },
+            "4": {
+                "title": "Delivery & Party",
+                "desc": "I deliver everything working, teach you how to use it, and we toast (virtually). I don't abandon you there."
+            }
+        }
+    },
+    "TestimonialsAndFAQ": {
+        "testimonials_title_start": "What my",
+        "testimonials_title_grad": "clients say",
+        "faq_title_start": "Frequently Asked",
+        "faq_title_grad": "Questions",
+        "testimonials": {
+            "1": {
+                "quote": "Matías always answers. That's gold to me. The web turned out incredible and paid for itself in two months.",
+                "author": "Ricardo M.",
+                "role": "Industrial SME Owner"
+            },
+            "2": {
+                "quote": "He explained simply what others made sound like nuclear science. The chatbot saved our life in summer.",
+                "author": "Sofía L.",
+                "role": "Marketing Manager"
+            },
+            "3": {
+                "quote": "Fast, neat, and straightforward. Understood my business better than I did.",
+                "author": "Martín G.",
+                "role": "Architect"
+            }
+        },
+        "faqs": {
+            "1": {
+                "q": "Do I need to know technology?",
+                "a": "Nothing. Zero. That's what I'm here for. You take care of your business, I ensure all tech works."
+            },
+            "2": {
+                "q": "What happens if something breaks?",
+                "a": "Hard to happen, but if it does, you have warranty. And if you hire maintenance, I fix it before you notice."
+            },
+            "3": {
+                "q": "How long does it take?",
+                "a": "Depends on project. A Landing Page can be in 1 week. Complex system, 3 or 4. But I always meet dates."
+            },
+            "4": {
+                "q": "Is it expensive to maintain?",
+                "a": "No. I look for scalable solutions that don't bleed you dry. I'll offer what you need, nothing more, nothing less."
+            }
+        }
+    },
+    "Footer": {
+        "desc": "Full Stack Developer & Automation Specialist. Helping businesses scale with real technology.",
+        "rights": "Matías Web & IA. All rights reserved.",
+        "form_title": "Let's Talk?",
+        "form_subtitle": "Leave me your details and I'll write you on WhatsApp. No obligation.",
+        "placeholder_name": "Name",
+        "placeholder_whatsapp": "WhatsApp",
+        "placeholder_message": "What do you need?",
+        "start_cta": "Send Message"
+    }
+}

@@ -1,0 +1,205 @@
+{
+    "Navbar": {
+        "brand_subtitle": "Web & IA",
+        "services": "Servicios",
+        "plans": "Planes",
+        "process": "Proceso",
+        "faq": "FAQ",
+        "cta": "Hablemos"
+    },
+    "Hero": {
+        "badge": "Tu socio tecnológico que te resuelve la vida",
+        "title_start": "Webs que Venden.",
+        "title_grad": "IA que Trabaja.",
+        "desc": "Combinamos desarrollo web sólido con Inteligencia Artificial para reducir costos, tiempos y dolores de cabeza. Vos ocupate del negocio, la tecnología es problema mío.",
+        "cta_primary": "Hablemos por WhatsApp",
+        "cta_secondary": "Ver trabajos realizados"
+    },
+    "PainPoints": {
+        "title_start": "¿Cansado de renegar con",
+        "title_highlight": "la tecnología?",
+        "desc": "Sé lo frustrante que es querer digitalizar tu negocio y encontrarte con trabas, demoras y costos ocultos.",
+        "cards": {
+            "1": {
+                "title": "Sitios lentos o caídos",
+                "desc": "Perdés ventas cuando tu web no carga o se vive rompiendo en el peor momento."
+            },
+            "2": {
+                "title": "Developers fantasmas",
+                "desc": "Empiezan el proyecto y desaparecen. O te hablan en chino cuando pedís un cambio."
+            },
+            "3": {
+                "title": "Presupuestos impagables",
+                "desc": "Agencias que cotizan fortunas por webs que podrías tener funcionando en días."
+            }
+        },
+        "solution_title": "Mi propuesta es simple:",
+        "solution_desc_start": "Soporte humano real, tecnología que escala y",
+        "solution_desc_bold": "precios lógicos gracias a la IA."
+    },
+    "Services": {
+        "title_start": "Soluciones Reales",
+        "title_grad": "Sin Tecnicismos",
+        "desc": "No te vendo código, te vendo tiempo libre y herramientas para facturar más.",
+        "cards": {
+            "1": {
+                "title": "Sitios Web Profesionales",
+                "desc": "Tu vidriera digital abierta 24/7. Webs rápidas, seguras y autoadministrables. No dependés de mí para cambiar una foto."
+            },
+            "2": {
+                "title": "Chatbots & Atención 24/7",
+                "desc": "Configuro bots inteligentes que responden dudas, agendan turnos y venden mientras vos dormís. Basta de perder clientes por no contestar."
+            },
+            "3": {
+                "title": "Automatización (n8n)",
+                "desc": "Empleados digitales que hacen el trabajo aburrido. Facturación, seguimiento de leads, posteos en redes... todo automático."
+            },
+            "4": {
+                "title": "Hosting & Mantenimiento",
+                "desc": "Yo me ocupo de que no se caiga nunca. Copias de seguridad, actualizaciones y seguridad para que duermas tranquilo."
+            }
+        }
+    },
+    "Pricing": {
+        "title_start": "Inversión",
+        "title_grad": "Clara y Transparente",
+        "desc": "La implementación de IA reduce tus costos operativos a largo plazo. Esto no es un gasto, es una inversión que se paga sola.",
+        "popular": "Más Elegido",
+        "cta": "Solicitar Cotización",
+        "plans": {
+            "1": {
+                "name": "Despegue",
+                "desc": "Ideal para arrancar con el pie derecho. Tu presencia digital profesional.",
+                "features": {
+                    "1": "Landing Page One-Page",
+                    "2": "Diseño Mobile First",
+                    "3": "Formulario de Contacto",
+                    "4": "Hosting incluido 1 año",
+                    "5": "Dominio .com bonificado"
+                }
+            },
+            "2": {
+                "name": "Profesional",
+                "desc": "Para negocios que quieren escalar. Web completa + Chatbot básico.",
+                "features": {
+                    "1": "Web Multipágina (Hasta 5)",
+                    "2": "Chatbot de Respuestas Frecuentes",
+                    "3": "Optimización SEO Básica",
+                    "4": "Integración con WhatsApp",
+                    "5": "Blog autoadministrable"
+                }
+            },
+            "3": {
+                "name": "Automatizado",
+                "desc": "La máquina de ventas total. Web + IA + Automatizaciones.",
+                "features": {
+                    "1": "Web E-commerce o a medida",
+                    "2": "Chatbot con IA (GPT-4)",
+                    "3": "Automatización de Turnos/Leads",
+                    "4": "Dashboard de Métricas",
+                    "5": "Soporte Prioritario"
+                }
+            }
+        }
+    },
+    "Portfolio": {
+        "title_start": "Resultados",
+        "title_grad": "Reales",
+        "desc": "Acá no hay teoría. Hay negocios que facturan más y dueños que duermen mejor.",
+        "link": "Ver todos los proyectos",
+        "cases": {
+            "1": {
+                "category": "Web Institucional",
+                "title": "Estudio Jurídico López & Asoc.",
+                "stats": "Lanzada en 2 semanas",
+                "desc": "Necesitaban seriedad y rapidez. Desarrollamos una web institucional que transmite confianza y autoridad, con un sistema de turnos integrado."
+            },
+            "2": {
+                "category": "Chatbot & IA",
+                "title": "Burger King Local (Franquicia)",
+                "stats": "+45% Pedidos Automáticos",
+                "desc": "Se perdían pedidos en WhatsApp por demoras en contestar. Implementamos un bot que toma el pedido, confirma y envía a cocina."
+            },
+            "3": {
+                "category": "Automatización",
+                "title": "Inmobiliaria Horizonte",
+                "stats": "0 Leads perdidos",
+                "desc": "Automatizamos la captura de leads desde portales. Ahora cada consulta recibe respuesta inmediata y se agenda en el CRM sola."
+            }
+        }
+    },
+    "Process": {
+        "title_start": "¿Cómo",
+        "title_grad": "Trabajamos?",
+        "desc": "Simple, rápido y sin dolores de cabeza. Eliminé la burocracia para que podamos avanzar rápido.",
+        "steps": {
+            "1": {
+                "title": "Diagnóstico",
+                "desc": "Charlamos 15 minutos. Me contás qué te duele y yo te digo si puedo curarlo. Sin vueltas."
+            },
+            "2": {
+                "title": "Propuesta",
+                "desc": "Te paso un plan de acción y un precio cerrado. Nada de 'costos sorpresa' a mitad de camino."
+            },
+            "3": {
+                "title": "Ejecución",
+                "desc": "Me pongo a trabajar. Vos seguí con lo tuyo. En pocos días te muestro avances reales."
+            },
+            "4": {
+                "title": "Entrega y Fiesta",
+                "desc": "Te entrego todo funcionando, te enseño a usarlo y brindamos (virtualmente). No te abandono ahí."
+            }
+        }
+    },
+    "TestimonialsAndFAQ": {
+        "testimonials_title_start": "Lo que dicen",
+        "testimonials_title_grad": "mis clientes",
+        "faq_title_start": "Preguntas",
+        "faq_title_grad": "Frecuentes",
+        "testimonials": {
+            "1": {
+                "quote": "Matías siempre contesta. Eso para mí vale oro. La web quedó increíble y se pagó sola en dos meses.",
+                "author": "Ricardo M.",
+                "role": "Dueño de Pyme Industrial"
+            },
+            "2": {
+                "quote": "Me explicó fácil lo que otros me hacían sonar a ciencia nuclear. El chatbot nos salvó la vida en verano.",
+                "author": "Sofía L.",
+                "role": "Gerente de Marketing"
+            },
+            "3": {
+                "quote": "Rápido, prolijo y sin vueltas. Entendió mi negocio mejor que yo.",
+                "author": "Martín G.",
+                "role": "Arquitecto"
+            }
+        },
+        "faqs": {
+            "1": {
+                "q": "¿Tengo que saber de tecnología?",
+                "a": "Nada. Cero. Para eso estoy yo. Vos ocupate de tu negocio, yo me encargo de que todo lo técnico funcione."
+            },
+            "2": {
+                "q": "¿Qué pasa si se rompe algo?",
+                "a": "Dificil que pase, pero si pasa, tenés garantía. Y si contratas el mantenimiento, yo lo arreglo antes de que te des cuenta."
+            },
+            "3": {
+                "q": "¿Cuánto tardás?",
+                "a": "Depende el proyecto. Una Landing Page puede estar en 1 semana. Un sistema complejo, 3 o 4. Pero siempre cumplo las fechas."
+            },
+            "4": {
+                "q": "¿Es muy caro mantener esto?",
+                "a": "No. Busco soluciones que escalen sin que te desangren. Te voy a ofrecer lo que necesites, ni más ni menos."
+            }
+        }
+    },
+    "Footer": {
+        "desc": "Desarrollador Full Stack & Especialista en Automatización. Ayudo a negocios a escalar con tecnología real.",
+        "rights": "Matías Web & IA. Todos los derechos reservados.",
+        "form_title": "¿Hablamos?",
+        "form_subtitle": "Dejame tus datos y te escribo por WhatsApp. Sin compromiso.",
+        "placeholder_name": "Nombre",
+        "placeholder_whatsapp": "WhatsApp",
+        "placeholder_message": "¿Qué necesitás?",
+        "start_cta": "Enviar Mensaje"
+    }
+}
