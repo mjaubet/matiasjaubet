@@ -35,19 +35,33 @@ export function ContactForm() {
     const onSubmit = async (data: FormData) => {
         setStatus("submitting")
         try {
+            const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+            if (!siteKey) {
+                console.error("Site Key is missing");
+                setStatus("error");
+                return;
+            }
+
             if (window.grecaptcha) {
-                window.grecaptcha.enterprise.ready(async () => {
-                    const token = await window.grecaptcha.enterprise.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, { action: 'contact_submit' });
+                await new Promise<void>((resolve, reject) => {
+                    window.grecaptcha.enterprise.ready(async () => {
+                        try {
+                            const token = await window.grecaptcha.enterprise.execute(siteKey, { action: 'contact_submit' });
 
-                    const res = await fetch("/api/contact", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ ...data, token }),
-                    })
+                            const res = await fetch("/api/contact", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ ...data, token }),
+                            })
 
-                    if (!res.ok) throw new Error("Failed to send")
-                    setStatus("success")
-                    reset()
+                            if (!res.ok) throw new Error("Failed to send")
+                            setStatus("success")
+                            reset()
+                            resolve()
+                        } catch (err) {
+                            reject(err)
+                        }
+                    });
                 });
             } else {
                 console.error("Recaptcha not loaded")
@@ -64,6 +78,8 @@ export function ContactForm() {
             <Script
                 src={`https://www.google.com/recaptcha/enterprise.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
                 strategy="afterInteractive"
+                onLoad={() => console.log("Recaptcha loaded")}
+                onError={(e) => console.error("Recaptcha failed to load", e)}
             />
             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 blur-[60px] rounded-full -z-10" />
 
