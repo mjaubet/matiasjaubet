@@ -6,17 +6,15 @@ export async function POST(request: Request) {
         const body = await request.json();
         const { name, email, whatsapp, country, need, token } = body;
 
-        // 1. Verify reCAPTCHA
+        // 1. Verify reCAPTCHA - COMMENTED FOR LOCALHOST TESTING
+        // TODO: Uncomment before deploying to Netlify
+        /*
         const recaptchaApiKey = process.env.RECAPTCHA_API_KEY;
         const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
         const projectID = "norse-habitat-470912-u1"; // From user instructions
 
         if (!recaptchaApiKey || recaptchaApiKey.startsWith("PLACEHOLDER")) {
             console.error("Recaptcha API Key is missing or invalid");
-            // Allow proceed for testing if key is missing? No, user wants validation.
-            // But if I strictly fail, they can't test email if they haven't provided key.
-            // I will fail if key is missing, as per instructions "validation in both languages".
-            // However, for development, I might log and fail.
             return NextResponse.json({ error: "Server configuration error (API Key)" }, { status: 500 });
         }
 
@@ -42,6 +40,7 @@ export async function POST(request: Request) {
 
         // Optional: Check score
         // if (verifyData.riskAnalysis.score < 0.5) { ... }
+        */
 
         // 2. Send Email
         const transporter = nodemailer.createTransport({

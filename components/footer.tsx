@@ -14,7 +14,7 @@ export function Footer() {
     return (
         <footer className="border-t border-white/10 bg-[#050505] relative z-10">
             <Section className="py-12 md:py-16">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid md:grid-cols-2 gap-12 items-start">
 
                     {/* Brand & Social */}
                     <div className="space-y-6">
@@ -32,10 +32,6 @@ export function Footer() {
                             <Link href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
                                 <Github className="w-5 h-5 text-white/70" />
                             </Link>
-
-                        </div>
-                        <div className="text-sm text-white/30 pt-4">
-                            © {new Date().getFullYear()} {t("rights")}
                         </div>
                     </div>
 
@@ -45,7 +41,14 @@ export function Footer() {
                 </div>
             </Section>
 
-
+            {/* Copyright Bar */}
+            <div className="border-t border-white/10 bg-black/30">
+                <Section className="py-2">
+                    <div className="text-sm text-white/40 text-center">
+                        © {new Date().getFullYear()} Matías Web & IA. Todos los derechos reservados.
+                    </div>
+                </Section>
+            </div>
         </footer>
     )
 }
