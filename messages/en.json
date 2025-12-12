@@ -1,4 +1,17 @@
 {
+    "Metadata": {
+        "title": "Matías Jaubet | Web Development & AI - Professional Digital Solutions",
+        "description": "Professional web development and AI automation to boost your business. Fast websites, smart chatbots, and automations that save you time and money.",
+        "keywords": "web development, artificial intelligence, chatbots, automation, n8n, professional websites, AI for business, frontend development",
+        "author": "Matías Jaubet",
+        "og_title": "Matías Jaubet | Web Development & AI",
+        "og_description": "Webs that Sell. AI that Works. We combine solid web development with Artificial Intelligence to reduce costs, time, and headaches.",
+        "og_type": "website",
+        "og_site_name": "Matías Jaubet Web & AI",
+        "twitter_card": "summary_large_image",
+        "twitter_title": "Matías Jaubet | Web Development & AI",
+        "twitter_description": "Professional web development and AI automation. Fast websites, smart chatbots, and automations for your business."
+    },
     "Navbar": {
         "brand_subtitle": "Web & AI",
         "services": "Services",

@@ -20,9 +20,19 @@ export function LanguageSwitcher() {
             variant="ghost"
             size="sm"
             onClick={toggleLanguage}
-            className="font-mono text-xs uppercase"
+            className="font-mono text-xs uppercase flex items-center gap-1.5"
         >
-            {locale === "es" ? "en" : "es"}
+            {locale === "es" ? (
+                <>
+                    <span className="text-base">🇬🇧</span>
+                    <span>EN</span>
+                </>
+            ) : (
+                <>
+                    <span className="text-base">🇪🇸</span>
+                    <span>ES</span>
+                </>
+            )}
         </Button>
     )
 }

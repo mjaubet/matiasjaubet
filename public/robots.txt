@@ -1,0 +1,11 @@
+# robots.txt para Matías Jaubet Web & IA
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://matiasjaubet.com/sitemap.xml
+
+# Disallow admin and private paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/

@@ -1,4 +1,17 @@
 {
+    "Metadata": {
+        "title": "Matías Jaubet | Desarrollo Web & IA - Soluciones Digitales Profesionales",
+        "description": "Desarrollo web profesional y automatización con IA para potenciar tu negocio. Sitios web rápidos, chatbots inteligentes y automatizaciones que te ahorran tiempo y dinero.",
+        "keywords": "desarrollo web, inteligencia artificial, chatbots, automatización, n8n, sitios web profesionales, IA para negocios, desarrollo frontend",
+        "author": "Matías Jaubet",
+        "og_title": "Matías Jaubet | Desarrollo Web & IA",
+        "og_description": "Webs que venden. IA que trabaja. Combinamos desarrollo web sólido con Inteligencia Artificial para reducir costos, tiempos y dolores de cabeza.",
+        "og_type": "website",
+        "og_site_name": "Matías Jaubet Web & IA",
+        "twitter_card": "summary_large_image",
+        "twitter_title": "Matías Jaubet | Desarrollo Web & IA",
+        "twitter_description": "Desarrollo web profesional y automatización con IA. Sitios web rápidos, chatbots inteligentes y automatizaciones para tu negocio."
+    },
     "Navbar": {
         "brand_subtitle": "Web & IA",
         "services": "Servicios",

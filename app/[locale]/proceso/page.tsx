@@ -6,12 +6,46 @@ import { Footer } from "@/components/footer"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
-    const t = await getTranslations({ locale: params.locale, namespace: "Process" })
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params
+    const t = await getTranslations({ locale, namespace: "Process" })
+
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://matiasjaubet.com'
+    const pageUrl = `${siteUrl}/${locale}/proceso`
+    const ogImageUrl = `${siteUrl}/opengraph-image.png`
 
     return {
         title: `${t("meta_title")} | Matías Jaubet`,
         description: t("meta_description"),
+        alternates: {
+            canonical: `/${locale}/proceso`,
+            languages: {
+                'es': '/es/proceso',
+                'en': '/en/proceso',
+            },
+        },
+        openGraph: {
+            type: 'website',
+            locale: locale,
+            url: pageUrl,
+            title: `${t("meta_title")} | Matías Jaubet`,
+            description: t("meta_description"),
+            siteName: 'Matías Jaubet Web & IA',
+            images: [
+                {
+                    url: ogImageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: t("meta_title"),
+                },
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${t("meta_title")} | Matías Jaubet`,
+            description: t("meta_description"),
+            images: [ogImageUrl],
+        },
     }
 }
 

@@ -1,9 +1,11 @@
 
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Outfit } from "next/font/google";
+import type { Metadata } from 'next';
+import StructuredData from '@/components/structured-data';
 import "../globals.css";
 
 const outfit = Outfit({
@@ -12,10 +14,81 @@ const outfit = Outfit({
     weight: ["300", "400", "500", "600", "700"],
 });
 
-export const metadata = {
-    title: "Matías Jaubet | Web & IA",
-    description: "Desarrollo web y automatización con IA para potenciar tu negocio.",
-};
+export async function generateMetadata({
+    params
+}: {
+    params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://matiasjaubet.com';
+    const ogImageUrl = `${siteUrl}/opengraph-image.png`;
+
+    return {
+        title: t('title'),
+        description: t('description'),
+        keywords: t('keywords'),
+        authors: [{ name: t('author') }],
+        creator: t('author'),
+        publisher: t('author'),
+        metadataBase: new URL(siteUrl),
+        alternates: {
+            canonical: '/',
+            languages: {
+                'es': '/es',
+                'en': '/en',
+            },
+        },
+        openGraph: {
+            type: 'website',
+            locale: locale,
+            url: `${siteUrl}/${locale}`,
+            title: t('og_title'),
+            description: t('og_description'),
+            siteName: t('og_site_name'),
+            images: [
+                {
+                    url: ogImageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: t('og_title'),
+                },
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: t('twitter_title'),
+            description: t('twitter_description'),
+            images: [ogImageUrl],
+        },
+        icons: {
+            icon: [
+                { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+                { url: '/favicon.png', sizes: '16x16', type: 'image/png' },
+            ],
+            apple: [
+                { url: '/favicon.png', sizes: '180x180', type: 'image/png' },
+            ],
+        },
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                'max-video-preview': -1,
+                'max-image-preview': 'large',
+                'max-snippet': -1,
+            },
+        },
+        verification: {
+            // Puedes agregar aquí tus códigos de verificación cuando los tengas
+            // google: 'tu-codigo-de-verificacion-google',
+            // yandex: 'tu-codigo-de-verificacion-yandex',
+        },
+    };
+}
 
 export default async function LocaleLayout({
     children,
@@ -34,9 +107,18 @@ export default async function LocaleLayout({
     // side is the easiest way to get started
     const messages = await getMessages();
 
+    // Get metadata description for structured data
+    const t = await getTranslations({ locale, namespace: 'Metadata' });
+
     return (
         <html lang={locale}>
+            <head>
+                <link rel="manifest" href="/manifest.json" />
+                <meta name="theme-color" content="#7c3aed" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+            </head>
             <body className={`${outfit.variable} antialiased min-h-screen selection:bg-purple-500/30`}>
+                <StructuredData description={t('description')} />
                 <NextIntlClientProvider messages={messages}>
                     {children}
                 </NextIntlClientProvider>
