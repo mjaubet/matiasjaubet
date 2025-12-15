@@ -42,19 +42,36 @@ export function PainPoints() {
                 </div>
             </AnimationWrapper>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
                 {pains.map((pain, idx) => (
-                    <motion.div key={idx} variants={staggerItem}>
-                        <Card className="relative group hover:border-red-500/30 transition-colors h-full">
-                            <div className="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center mb-4 group-hover:bg-red-500/20 transition-colors">
-                                <pain.icon className="w-6 h-6 text-red-400" />
+                    <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.5,
+                            delay: idx * 0.15,
+                            ease: [0.21, 0.47, 0.32, 0.98]
+                        }}
+                    >
+                        <Card className="relative group hover:border-red-500/30 transition-all duration-300 h-full overflow-hidden hover:shadow-lg hover:shadow-red-500/10">
+                            {/* Large decorative icon in background */}
+                            <div className="absolute -top-4 -right-4 opacity-[0.08] group-hover:opacity-[0.12] transition-opacity duration-300">
+                                <pain.icon className="w-32 h-32 text-red-400" strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-xl font-semibold mb-2">{pain.title}</h3>
-                            <p className="text-white/60">{pain.desc}</p>
+
+                            {/* Small icon with enhanced styling */}
+                            <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-red-500/20 to-red-500/5 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:from-red-500/30 group-hover:to-red-500/10 transition-all duration-300 border border-red-500/20">
+                                <pain.icon className="w-7 h-7 text-red-400" strokeWidth={2} />
+                            </div>
+
+                            <h3 className="relative text-xl font-semibold mb-2">{pain.title}</h3>
+                            <p className="relative text-white/60">{pain.desc}</p>
                         </Card>
                     </motion.div>
                 ))}
-            </StaggerContainer>
+            </div>
 
             {/* The Solution Bridge - Personal Touch */}
             <AnimationWrapper variant="slideUp" delay={0.3}>
