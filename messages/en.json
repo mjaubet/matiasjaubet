@@ -15,6 +15,7 @@
     "Navbar": {
         "brand_subtitle": "Web & AI",
         "services": "Services",
+        "projects": "Projects",
         "plans": "Plans",
         "process": "Process",
         "faq": "FAQ",
@@ -125,6 +126,33 @@
         "desc": "No theory here. Just businesses billing more and owners sleeping better.",
         "link": "View all projects",
         "cases": {
+            "1": {
+                "category": "Institutional Web",
+                "title": "Law Firm López & Assoc.",
+                "stats": "Launched in 2 weeks",
+                "desc": "They needed seriousness and speed. We developed an institutional web transmitting trust and authority, with an integrated appointment system."
+            },
+            "2": {
+                "category": "Chatbot & AI",
+                "title": "Burger King Local (Franchise)",
+                "stats": "+45% Automatic Orders",
+                "desc": "Orders were lost due to delay in answering. We implemented a bot that takes order, confirms, and sends to kitchen."
+            },
+            "3": {
+                "category": "Automation",
+                "title": "Horizonte Real Estate",
+                "stats": "0 Leads lost",
+                "desc": "We automated lead capture from portals. Now every inquiry receives immediate response and schedules in CRM alone."
+            }
+        }
+    },
+    "Projects": {
+        "meta_title": "Projects | Matías Web & AI",
+        "meta_description": "Explore our project portfolio: professional websites, smart chatbots, automations, and hosting. Real results for real businesses.",
+        "title_start": "Our",
+        "title_grad": "Projects",
+        "desc": "Explore the projects we've developed for our clients. Each one with measurable results and cutting-edge technology.",
+        "projects": {
             "1": {
                 "category": "Institutional Web",
                 "title": "Law Firm López & Assoc.",

@@ -15,6 +15,7 @@
     "Navbar": {
         "brand_subtitle": "Web & IA",
         "services": "Servicios",
+        "projects": "Proyectos",
         "plans": "Planes",
         "process": "Proceso",
         "faq": "FAQ",
@@ -125,6 +126,33 @@
         "desc": "Acá no hay teoría. Hay negocios que facturan más y dueños que duermen mejor.",
         "link": "Ver todos los proyectos",
         "cases": {
+            "1": {
+                "category": "Web Institucional",
+                "title": "Estudio Jurídico López & Asoc.",
+                "stats": "Lanzada en 2 semanas",
+                "desc": "Necesitaban seriedad y rapidez. Desarrollamos una web institucional que transmite confianza y autoridad, con un sistema de turnos integrado."
+            },
+            "2": {
+                "category": "Chatbot & IA",
+                "title": "Burger King Local (Franquicia)",
+                "stats": "+45% Pedidos Automáticos",
+                "desc": "Se perdían pedidos por demoras en contestar. Implementamos un bot que toma el pedido, confirma y envía a cocina."
+            },
+            "3": {
+                "category": "Automatización",
+                "title": "Inmobiliaria Horizonte",
+                "stats": "0 Leads perdidos",
+                "desc": "Automatizamos la captura de leads desde portales. Ahora cada consulta recibe respuesta inmediata y se agenda en el CRM sola."
+            }
+        }
+    },
+    "Projects": {
+        "meta_title": "Proyectos | Matías Web & IA",
+        "meta_description": "Explora nuestro portfolio de proyectos: webs profesionales, chatbots inteligentes, automatizaciones y hosting. Resultados reales para negocios reales.",
+        "title_start": "Nuestros",
+        "title_grad": "Proyectos",
+        "desc": "Explora los proyectos que hemos desarrollado para nuestros clientes. Cada uno con resultados medibles y tecnología de punta.",
+        "projects": {
             "1": {
                 "category": "Web Institucional",
                 "title": "Estudio Jurídico López & Asoc.",

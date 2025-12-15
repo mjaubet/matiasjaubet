@@ -16,6 +16,7 @@ export function Navbar() {
 
     const navLinks = [
         { name: t("services"), href: "/servicios", isAnchor: false },
+        { name: t("projects"), href: "/proyectos", isAnchor: false },
         { name: t("process"), href: "/proceso", isAnchor: false },
         { name: t("faq"), href: "/preguntas-frecuentes", isAnchor: false },
     ]

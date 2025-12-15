@@ -77,7 +77,7 @@ export function PainPoints() {
                                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
 
                                 {/* Photo container */}
-                                <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl">
+                                <div className="relative w-full h-64 md:w-80 md:h-80 lg:w-full rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl">
                                     <img
                                         src="/matias-profile.png"
                                         alt="Matías Jaubet"

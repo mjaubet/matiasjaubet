@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://matiasjaubet.com';
 
     // Define las rutas principales de tu sitio
-    const routes = ['', '/servicios', '/proceso', '/faq'];
+    const routes = ['', '/servicios', '/proyectos', '/proceso', '/preguntas-frecuentes'];
     const locales = ['es', 'en'];
 
     const sitemap: MetadataRoute.Sitemap = [];

@@ -18,21 +18,24 @@ export function Portfolio() {
             title: t("cases.1.title"),
             color: "from-blue-500 to-cyan-500",
             stats: t("cases.1.stats"),
-            desc: t("cases.1.desc")
+            desc: t("cases.1.desc"),
+            image: "/proyecto-juridico.png"
         },
         {
             category: t("cases.2.category"),
             title: t("cases.2.title"),
             color: "from-orange-500 to-red-500",
             stats: t("cases.2.stats"),
-            desc: t("cases.2.desc")
+            desc: t("cases.2.desc"),
+            image: "/proyecto-burger.png"
         },
         {
             category: t("cases.3.category"),
             title: t("cases.3.title"),
             color: "from-emerald-500 to-green-500",
             stats: t("cases.3.stats"),
-            desc: t("cases.3.desc")
+            desc: t("cases.3.desc"),
+            image: "/proyecto-inmobiliaria.png"
         }
     ]
 
@@ -48,7 +51,7 @@ export function Portfolio() {
                             {t("desc")}
                         </p>
                     </div>
-                    <Link href="#" className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
+                    <Link href="/proyectos" className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
                         {t("link")} <ArrowUpRight className="w-4 h-4" />
                     </Link>
                 </div>
@@ -58,10 +61,21 @@ export function Portfolio() {
                 {cases.map((c, idx) => (
                     <motion.div key={idx} variants={staggerItem}>
                         <Card className="group overflow-hidden border-0 bg-neutral-900/50 h-full">
-                            {/* Color banner */}
-                            <div className={`h-2 w-full bg-gradient-to-r ${c.color}`} />
+                            {/* Image Section */}
+                            <div className="relative h-48 overflow-hidden">
+                                <img
+                                    src={c.image}
+                                    alt={c.title}
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                />
+                                {/* Gradient overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent" />
 
-                            <div className="p-2">
+                                {/* Color banner on top of image */}
+                                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${c.color}`} />
+                            </div>
+
+                            <div className="p-6">
                                 <div className="text-xs font-medium text-white/40 mb-2 uppercase tracking-wide">{c.category}</div>
                                 <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">{c.title}</h3>
 
