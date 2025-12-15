@@ -36,7 +36,7 @@ export function PainPoints() {
                     <h2 className="text-3xl md:text-4xl font-bold">
                         {t("title_start")} <span className="text-red-400">{t("title_highlight")}</span>
                     </h2>
-                    <p className="text-white/60 max-w-xl mx-auto">
+                    <p className="text-white/60 max-w-xl mx-auto mb-8">
                         {t("desc")}
                     </p>
                 </div>

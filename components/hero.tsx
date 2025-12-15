@@ -91,6 +91,9 @@ export function Hero() {
                     </motion.div>
                 </motion.div>
             </Section>
+
+            {/* Smooth gradient transition to next section */}
+            <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent via-[#0a0a0a]/30 via-[#0a0a0a]/60 to-[#0a0a0a] pointer-events-none z-20" />
         </div>
     )
 }
