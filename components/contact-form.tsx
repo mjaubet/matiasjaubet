@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
@@ -35,9 +35,38 @@ export function ContactForm() {
 
     type FormData = z.infer<typeof schema>
 
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>({
+    const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm<FormData>({
         resolver: zodResolver(schema)
     })
+
+    // Listen for plan selection events
+    useEffect(() => {
+        const handlePlanSelected = (event: CustomEvent) => {
+            const planName = event.detail.plan;
+            const message = `Estoy interesado en el plan: ${planName}`;
+            setValue('need', message);
+        };
+
+        // Check URL parameters on mount
+        const checkUrlParams = () => {
+            const hash = window.location.hash;
+            const params = new URLSearchParams(hash.split('?')[1] || '');
+            const planParam = params.get('plan');
+
+            if (planParam) {
+                const planName = planParam.replace(/-/g, ' ');
+                const message = `Estoy interesado en el plan: ${planName}`;
+                setValue('need', message);
+            }
+        };
+
+        window.addEventListener('planSelected', handlePlanSelected as EventListener);
+        checkUrlParams();
+
+        return () => {
+            window.removeEventListener('planSelected', handlePlanSelected as EventListener);
+        };
+    }, [setValue]);
 
     const onSubmit = async (data: FormData) => {
         setStatus("submitting")

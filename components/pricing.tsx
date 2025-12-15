@@ -91,7 +91,29 @@ export function Pricing() {
                                 ))}
                             </div>
 
-                            <Button variant={plan.popular ? 'primary' : 'glass'} className="w-full">
+                            <Button
+                                variant={plan.popular ? 'primary' : 'glass'}
+                                className="w-full"
+                                onClick={() => {
+                                    const contactSection = document.getElementById('contact');
+                                    if (contactSection) {
+                                        // Update URL with plan parameter
+                                        const planParam = plan.name.toLowerCase().replace(/\s+/g, '-');
+                                        window.history.pushState({}, '', `#contact?plan=${planParam}`);
+
+                                        // Smooth scroll to contact form
+                                        contactSection.scrollIntoView({
+                                            behavior: 'smooth',
+                                            block: 'start'
+                                        });
+
+                                        // Trigger custom event to notify contact form
+                                        window.dispatchEvent(new CustomEvent('planSelected', {
+                                            detail: { plan: plan.name }
+                                        }));
+                                    }
+                                }}
+                            >
                                 {t("cta")}
                             </Button>
                         </Card>

@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import { Outfit } from "next/font/google";
 import type { Metadata } from 'next';
 import StructuredData from '@/components/structured-data';
+import { MouseSparkles } from '@/components/ui/mouse-sparkles';
 import "../globals.css";
 
 const outfit = Outfit({
@@ -109,6 +110,13 @@ export default async function LocaleLayout({
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
             </head>
             <body className={`${outfit.variable} antialiased min-h-screen selection:bg-purple-500/30`}>
+                <MouseSparkles
+                    frequency={0.25}
+                    size={2.5}
+                    opacity={0.45}
+                    glowIntensity={15}
+                    scale={2.5}
+                />
                 <StructuredData description={t('description')} />
                 <NextIntlClientProvider messages={messages}>
                     {children}

@@ -12,74 +12,85 @@ export function Hero() {
     const t = useTranslations("Hero")
 
     return (
-        <Section className="pt-32 md:pt-48 pb-16 min-h-[90vh] flex flex-col justify-center items-center text-center relative overflow-hidden">
-            {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full -z-10" />
+        <div className="relative w-full min-h-[90vh] overflow-hidden">
+            {/* Animated Gradient Background - Full Screen */}
+            <div className="absolute inset-0 w-full h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-shift" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-600/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent" />
+            </div>
 
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={{
-                    hidden: {},
-                    visible: {
-                        transition: {
-                            staggerChildren: 0.15
+            {/* Subtle gradient glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/30 blur-[120px] rounded-full animate-pulse-slow" />
+
+
+            {/* Content */}
+            <Section className="hero-section pt-32 md:pt-48 pb-16 min-h-[90vh] flex flex-col justify-center items-center text-center relative z-10">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        hidden: {},
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.15
+                            }
                         }
-                    }
-                }}
-                className="space-y-6 max-w-3xl"
-            >
-                <motion.div
-                    variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 }
                     }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-white/80"
+                    className="space-y-6 max-w-3xl relative z-10"
                 >
-                    <Sparkles className="w-4 h-4 text-purple-400" />
-                    <span>{t("badge")}</span>
+                    <motion.div
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-white/80 backdrop-blur-sm"
+                    >
+                        <Sparkles className="w-4 h-4 text-purple-400" />
+                        <span>{t("badge")}</span>
+                    </motion.div>
+
+                    <motion.h1
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        className="text-5xl md:text-7xl font-bold tracking-tight leading-tight"
+                    >
+                        {t("title_start")} <br />
+                        <span className="text-gradient">{t("title_grad")}</span>
+                    </motion.h1>
+
+                    <motion.p
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed"
+                    >
+                        {t("desc")}
+                    </motion.p>
+
+                    <motion.div
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
+                    >
+                        <Button size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
+                            <a href="#contact">
+                                {t("cta_primary")} <ArrowRight className="ml-2 w-4 h-4" />
+                            </a>
+                        </Button>
+                        <Button variant="glass" size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
+                            <a href="#portfolio">
+                                {t("cta_secondary")}
+                            </a>
+                        </Button>
+                    </motion.div>
                 </motion.div>
-
-                <motion.h1
-                    variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 }
-                    }}
-                    className="text-5xl md:text-7xl font-bold tracking-tight leading-tight"
-                >
-                    {t("title_start")} <br />
-                    <span className="text-gradient">{t("title_grad")}</span>
-                </motion.h1>
-
-                <motion.p
-                    variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 }
-                    }}
-                    className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed"
-                >
-                    {t("desc")}
-                </motion.p>
-
-                <motion.div
-                    variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 }
-                    }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
-                >
-                    <Button size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
-                        <a href="#contact">
-                            {t("cta_primary")} <ArrowRight className="ml-2 w-4 h-4" />
-                        </a>
-                    </Button>
-                    <Button variant="glass" size="lg" className="h-12 px-8 text-base w-full sm:w-auto" asChild>
-                        <a href="#portfolio">
-                            {t("cta_secondary")}
-                        </a>
-                    </Button>
-                </motion.div>
-            </motion.div>
-        </Section>
+            </Section>
+        </div>
     )
 }

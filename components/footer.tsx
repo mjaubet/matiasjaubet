@@ -15,15 +15,15 @@ export function Footer() {
     return (
         <footer className="border-t border-white/10 bg-[#050505] relative z-10">
             <AnimationWrapper variant="fadeIn">
-                <Section className="py-8">
+                <Section className="py-16">
                     <div className="grid md:grid-cols-2 gap-12 items-start">
 
                         {/* Brand & Social */}
                         <div className="space-y-6">
-                            <Link href="/" className="text-2xl font-bold flex items-center gap-2">
+                            {/* <Link href="/" className="text-2xl font-bold flex items-center gap-2">
                                 <span className="text-gradient">Matías Jaubet</span>
                                 <span className="text-white/80 font-light">Web & IA</span>
-                            </Link>
+                            </Link> */}
                             <p className="text-white/60 max-w-sm">
                                 {t("desc")}
                             </p>
