@@ -36,9 +36,9 @@ export function Process() {
         <Section id="proceso">
             <AnimationWrapper variant="fadeIn">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                    <h1 className="text-3xl md:text-5xl font-bold mb-6">
                         {t("title_start")} <span className="text-gradient">{t("title_grad")}</span>
-                    </h2>
+                    </h1>
                     <p className="text-white/60 max-w-2xl mx-auto text-lg">
                         {t("desc")}
                     </p>

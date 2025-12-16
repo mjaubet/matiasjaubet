@@ -53,9 +53,9 @@ export function Projects() {
         <Section id="proyectos">
             <AnimationWrapper variant="fadeIn">
                 <div className="text-center mb-12 space-y-4">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                    <h1 className="text-3xl md:text-5xl font-bold mb-4">
                         {t("title_start")} <span className="text-gradient">{t("title_grad")}</span>
-                    </h2>
+                    </h1>
                     <p className="text-white/60 max-w-xl mx-auto">
                         {t("desc")}
                     </p>

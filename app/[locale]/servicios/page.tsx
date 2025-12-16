@@ -3,6 +3,8 @@ import { Pricing } from "@/components/pricing"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { getTranslations } from "next-intl/server"
+import WebPageSchema from "@/components/webpage-schema"
+import BreadcrumbSchema from "@/components/breadcrumb-schema"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params
@@ -47,21 +49,38 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     }
 }
 
-export default function ServicesPage() {
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params
+    const t = await getTranslations({ locale, namespace: "ServicesPage" })
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://matiasjaubet.com'
+
     return (
-        <main className="min-h-screen bg-[#0a0a0a] text-white selection:bg-purple-500/30">
-            <Navbar />
+        <>
+            <WebPageSchema
+                name={t("meta_title")}
+                description={t("meta_description")}
+                url={`${siteUrl}/${locale}/servicios`}
+            />
+            <BreadcrumbSchema
+                items={[
+                    { name: 'Home', url: `${siteUrl}/${locale}` },
+                    { name: t("meta_title"), url: `${siteUrl}/${locale}/servicios` }
+                ]}
+            />
+            <main className="min-h-screen bg-[#0a0a0a] text-white selection:bg-purple-500/30">
+                <Navbar />
 
-            <div className="pt-32 pb-20 space-y-16">
-                <Services />
+                <div className="pt-32 pb-20 space-y-16">
+                    <Services />
 
-                {/* Visual Break */}
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+                    {/* Visual Break */}
+                    <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
 
-                <Pricing />
-            </div>
+                    <Pricing />
+                </div>
 
-            <Footer />
-        </main>
+                <Footer />
+            </main>
+        </>
     )
 }

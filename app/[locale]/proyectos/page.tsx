@@ -3,6 +3,8 @@ import { Navbar } from "@/components/navbar"
 import { Projects } from "@/components/projects"
 import { Footer } from "@/components/footer"
 import { getTranslations } from "next-intl/server"
+import WebPageSchema from "@/components/webpage-schema"
+import BreadcrumbSchema from "@/components/breadcrumb-schema"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params
@@ -59,16 +61,33 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     }
 }
 
-export default function ProyectosPage() {
+export default async function ProyectosPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params
+    const t = await getTranslations({ locale, namespace: "Projects" })
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://matiasjaubet.com'
+
     return (
-        <main className="min-h-screen bg-[#0a0a0a] text-white selection:bg-purple-500/30">
-            <Navbar />
+        <>
+            <WebPageSchema
+                name={t("meta_title")}
+                description={t("meta_description")}
+                url={`${siteUrl}/${locale}/proyectos`}
+            />
+            <BreadcrumbSchema
+                items={[
+                    { name: 'Home', url: `${siteUrl}/${locale}` },
+                    { name: t("meta_title"), url: `${siteUrl}/${locale}/proyectos` }
+                ]}
+            />
+            <main className="min-h-screen bg-[#0a0a0a] text-white selection:bg-purple-500/30">
+                <Navbar />
 
-            <div className="space-y-24 md:space-y-32 pt-32 pb-24">
-                <Projects />
-            </div>
+                <div className="space-y-24 md:space-y-32 pt-32 pb-24">
+                    <Projects />
+                </div>
 
-            <Footer />
-        </main>
+                <Footer />
+            </main>
+        </>
     )
 }
