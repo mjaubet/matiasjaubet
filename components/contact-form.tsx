@@ -71,9 +71,6 @@ export function ContactForm() {
     const onSubmit = async (data: FormData) => {
         setStatus("submitting")
         try {
-            // RECAPTCHA COMMENTED FOR LOCALHOST TESTING
-            // TODO: Uncomment before deploying to Netlify
-            /*
             const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
             if (!siteKey) {
                 console.error("Site Key is missing");
@@ -106,22 +103,6 @@ export function ContactForm() {
                 console.error("Recaptcha not loaded")
                 setStatus("error")
             }
-            */
-
-            // Temporary: Direct submission without reCAPTCHA for localhost
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ ...data, token: "localhost-test" }),
-            })
-
-            if (!res.ok) {
-                const errorData = await res.json();
-                console.error("API Error:", errorData);
-                throw new Error(errorData.error || "Failed to send")
-            }
-            setStatus("success")
-            reset()
         } catch (error) {
             console.error(error)
             setStatus("error")

@@ -6,9 +6,7 @@ export async function POST(request: Request) {
         const body = await request.json();
         const { name, email, whatsapp, country, need, token } = body;
 
-        // 1. Verify reCAPTCHA - COMMENTED FOR LOCALHOST TESTING
-        // TODO: Uncomment before deploying to Netlify
-        /*
+        // 1. Verify reCAPTCHA
         const recaptchaApiKey = process.env.RECAPTCHA_API_KEY;
         const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
         const projectID = "norse-habitat-470912-u1"; // From user instructions
@@ -40,7 +38,7 @@ export async function POST(request: Request) {
 
         // Optional: Check score
         // if (verifyData.riskAnalysis.score < 0.5) { ... }
-        */
+
 
         // 2. Send Email
         const transporter = nodemailer.createTransport({
