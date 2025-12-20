@@ -288,5 +288,13 @@
     "FAQ": {
         "meta_title": "Preguntas Frecuentes | Matías Web & IA",
         "meta_description": "Resuelvo tus dudas sobre desarrollo web, chatbots, automatización y más. Todo lo que necesitás saber antes de empezar tu proyecto."
+    },
+    "Breadcrumbs": {
+        "home": "Inicio",
+        "servicios": "Servicios",
+        "proyectos": "Proyectos",
+        "proceso": "Proceso",
+        "preguntas-frecuentes": "Preguntas Frecuentes",
+        "planes": "Planes"
     }
 }

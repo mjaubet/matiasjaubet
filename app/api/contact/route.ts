@@ -4,43 +4,9 @@ import nodemailer from 'nodemailer';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { name, email, whatsapp, country, need, token } = body;
+        const { name, email, whatsapp, country, need } = body;
 
-        // 1. Verify reCAPTCHA
-        const recaptchaApiKey = process.env.RECAPTCHA_API_KEY;
-        const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-        const projectID = "norse-habitat-470912-u1"; // From user instructions
-
-        if (!recaptchaApiKey || recaptchaApiKey.startsWith("PLACEHOLDER")) {
-            console.error("Recaptcha API Key is missing or invalid");
-            return NextResponse.json({ error: "Server configuration error (API Key)" }, { status: 500 });
-        }
-
-        const verifyUrl = `https://recaptchaenterprise.googleapis.com/v1/projects/${projectID}/assessments?key=${recaptchaApiKey}`;
-
-        const verifyResponse = await fetch(verifyUrl, {
-            method: 'POST',
-            body: JSON.stringify({
-                event: {
-                    token: token,
-                    expectedAction: 'contact_submit',
-                    siteKey: siteKey,
-                }
-            })
-        });
-
-        const verifyData = await verifyResponse.json();
-
-        if (!verifyData.tokenProperties?.valid) {
-            console.error("Recaptcha token invalid:", verifyData);
-            return NextResponse.json({ error: "Invalid Recaptcha" }, { status: 400 });
-        }
-
-        // Optional: Check score
-        // if (verifyData.riskAnalysis.score < 0.5) { ... }
-
-
-        // 2. Send Email
+        // Send Email directly (reCAPTCHA removed temporarily)
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: Number(process.env.SMTP_PORT),

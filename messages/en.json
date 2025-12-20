@@ -288,5 +288,13 @@
     "FAQ": {
         "meta_title": "Frequently Asked Questions | Matías Web & AI",
         "meta_description": "Get answers to your questions about web development, chatbots, automation, and more. Everything you need to know before starting your project."
+    },
+    "Breadcrumbs": {
+        "home": "Home",
+        "servicios": "Services",
+        "proyectos": "Projects",
+        "proceso": "Process",
+        "preguntas-frecuentes": "FAQ",
+        "planes": "Plans"
     }
 }

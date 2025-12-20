@@ -5,14 +5,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { useTranslations } from "next-intl"
-import Script from "next/script"
 import { Button } from "@/components/ui/button"
-
-declare global {
-    interface Window {
-        grecaptcha: any;
-    }
-}
 
 export function ContactForm() {
     const t = useTranslations("Footer")
@@ -71,38 +64,20 @@ export function ContactForm() {
     const onSubmit = async (data: FormData) => {
         setStatus("submitting")
         try {
-            const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-            if (!siteKey) {
-                console.error("Site Key is missing");
-                setStatus("error");
-                return;
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            })
+
+            if (!res.ok) {
+                const errorData = await res.json();
+                console.error("API Error:", errorData);
+                throw new Error(errorData.error || "Failed to send")
             }
 
-            if (window.grecaptcha) {
-                await new Promise<void>((resolve, reject) => {
-                    window.grecaptcha.enterprise.ready(async () => {
-                        try {
-                            const token = await window.grecaptcha.enterprise.execute(siteKey, { action: 'contact_submit' });
-
-                            const res = await fetch("/api/contact", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify({ ...data, token }),
-                            })
-
-                            if (!res.ok) throw new Error("Failed to send")
-                            setStatus("success")
-                            reset()
-                            resolve()
-                        } catch (err) {
-                            reject(err)
-                        }
-                    });
-                });
-            } else {
-                console.error("Recaptcha not loaded")
-                setStatus("error")
-            }
+            setStatus("success")
+            reset()
         } catch (error) {
             console.error(error)
             setStatus("error")
@@ -111,12 +86,6 @@ export function ContactForm() {
 
     return (
         <div id="contact" className={`${status === "success" ? "" : "glass-card"} p-6 md:p-8 rounded-2xl relative overflow-hidden`}>
-            <Script
-                src={`https://www.google.com/recaptcha/enterprise.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-                strategy="afterInteractive"
-                onLoad={() => console.log("Recaptcha loaded")}
-                onError={(e) => console.error("Recaptcha failed to load", e)}
-            />
             {status !== "success" && <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 blur-[60px] rounded-full -z-10" />}
 
             {status === "success" ? (
