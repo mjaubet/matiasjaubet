@@ -19,7 +19,7 @@ export default function Home() {
 
         {/* Visual Break */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
-        <h1>Portfolio</h1>
+
         <Portfolio />
       </div>
 
