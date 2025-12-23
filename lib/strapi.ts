@@ -112,7 +112,7 @@ export async function getProjects(locale: string = 'en'): Promise<Project[]> {
 export async function getFeaturedProjects(locale: string = 'en'): Promise<Project[]> {
     try {
         const strapiLocale = mapLocale(locale);
-        const url = `/projects?locale=${strapiLocale}&filters[featured][$eq]=true&populate=*&sort=publishedDate:desc&pagination[limit]=3`;
+        const url = `/projects?locale=${strapiLocale}&filters[featured][$eq]=true&populate=*&sort=publishedDate:desc`;
         console.log('Fetching featured projects from:', `${STRAPI_URL}/api${url}`);
 
         const response = await fetchAPI<StrapiResponse<Project[]>>(url);
