@@ -2,52 +2,74 @@
 
 import { Card } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 import { motion, AnimatePresence } from "framer-motion"
 import { AnimationWrapper, StaggerContainer, staggerItem } from "@/components/ui/animation-wrapper"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { getProjects, getStrapiImageUrl, getStrapiImageAlt, type Project } from "@/lib/strapi"
 
-type FilterType = "TODOS" | "Webs" | "Hosting" | "Asistentes"
+type FilterType = "ALL" | "web" | "chatbot" | "automatition" | "hosting"
 
 export function Projects() {
     const t = useTranslations("Projects")
-    const [activeFilter, setActiveFilter] = useState<FilterType>("TODOS")
+    const locale = useLocale()
+    const [activeFilter, setActiveFilter] = useState<FilterType>("ALL")
+    const [projects, setProjects] = useState<Project[]>([])
+    const [loading, setLoading] = useState(true)
 
-    const projects = [
-        {
-            category: t("projects.1.category"),
-            title: t("projects.1.title"),
-            color: "from-blue-500 to-cyan-500",
-            stats: t("projects.1.stats"),
-            desc: t("projects.1.desc"),
-            image: "/proyecto-juridico.png",
-            type: "Webs" as FilterType
-        },
-        {
-            category: t("projects.2.category"),
-            title: t("projects.2.title"),
-            color: "from-orange-500 to-red-500",
-            stats: t("projects.2.stats"),
-            desc: t("projects.2.desc"),
-            image: "/proyecto-burger.png",
-            type: "Asistentes" as FilterType
-        },
-        {
-            category: t("projects.3.category"),
-            title: t("projects.3.title"),
-            color: "from-emerald-500 to-green-500",
-            stats: t("projects.3.stats"),
-            desc: t("projects.3.desc"),
-            image: "/proyecto-inmobiliaria.png",
-            type: "Asistentes" as FilterType
+    useEffect(() => {
+        async function fetchProjects() {
+            try {
+                setLoading(true)
+                const data = await getProjects(locale)
+                setProjects(data)
+            } catch (error) {
+                console.error('Error fetching projects:', error)
+            } finally {
+                setLoading(false)
+            }
         }
-    ]
+        fetchProjects()
+    }, [locale])
 
-    const filters: FilterType[] = ["TODOS", "Webs", "Hosting", "Asistentes"]
+    // Obtener categorías únicas de los proyectos
+    const categories = Array.from(new Set(projects.map(p => p.category)))
+    const filters: FilterType[] = ["ALL", ...categories as FilterType[]]
 
-    const filteredProjects = activeFilter === "TODOS"
+    const filteredProjects = activeFilter === "ALL"
         ? projects
-        : projects.filter(p => p.type === activeFilter)
+        : projects.filter(p => p.category === activeFilter)
+
+    const getCategoryColor = (category: string) => {
+        const colors: Record<string, string> = {
+            'web': 'from-blue-500 to-cyan-500',
+            'chatbot': 'from-orange-500 to-red-500',
+            'automatition': 'from-emerald-500 to-green-500',
+            'hosting': 'from-purple-500 to-pink-500'
+        }
+        return colors[category.toLowerCase()] || 'from-gray-500 to-gray-600'
+    }
+
+    const getCategoryLabel = (category: string) => {
+        const labels: Record<string, string> = {
+            'web': 'Web',
+            'chatbot': 'Chatbot',
+            'automatition': 'Automatización',
+            'hosting': 'Hosting'
+        }
+        return labels[category.toLowerCase()] || category
+    }
+
+    if (loading) {
+        return (
+            <Section id="proyectos">
+                <div className="text-center py-20">
+                    <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
+                    <p className="text-white/60 mt-4">Cargando proyectos...</p>
+                </div>
+            </Section>
+        )
+    }
 
     return (
         <Section id="proyectos">
@@ -78,13 +100,13 @@ export function Projects() {
                                 }
                             `}
                         >
-                            {filter}
+                            {filter === "ALL" ? "Todos" : getCategoryLabel(filter)}
                         </button>
                     ))}
                 </div>
             </AnimationWrapper>
 
-            {/* Projects Grid with Animation */}
+            {/* Projects Grid */}
             <AnimatePresence mode="wait">
                 <motion.div
                     key={activeFilter}
@@ -94,9 +116,9 @@ export function Projects() {
                     transition={{ duration: 0.3 }}
                 >
                     <StaggerContainer className="grid md:grid-cols-3 gap-6">
-                        {filteredProjects.map((project, idx) => (
+                        {filteredProjects.map((project) => (
                             <motion.div
-                                key={`${activeFilter}-${idx}`}
+                                key={project.id}
                                 variants={staggerItem}
                                 layout
                             >
@@ -104,28 +126,47 @@ export function Projects() {
                                     {/* Image Section */}
                                     <div className="relative h-48 overflow-hidden">
                                         <img
-                                            src={project.image}
-                                            alt={project.title}
+                                            src={getStrapiImageUrl(project.image, 'medium')}
+                                            alt={getStrapiImageAlt(project.image, project.title)}
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
                                         {/* Gradient overlay */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent" />
 
-                                        {/* Color banner on top of image */}
-                                        <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.color}`} />
+                                        {/* Color banner */}
+                                        <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${getCategoryColor(project.category)}`} />
+
+                                        {/* Featured badge */}
+                                        {project.featured && (
+                                            <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                                                ⭐ Destacado
+                                            </div>
+                                        )}
                                     </div>
 
                                     <div className="p-6">
-                                        <div className="text-xs font-medium text-white/40 mb-2 uppercase tracking-wide">{project.category}</div>
-                                        <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">{project.title}</h3>
-
-                                        <div className="mb-4 inline-block px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-white/90">
-                                            🚀 {project.stats}
+                                        <div className="text-xs font-medium text-white/40 mb-2 uppercase tracking-wide">
+                                            {getCategoryLabel(project.category)}
                                         </div>
+                                        <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">
+                                            {project.title}
+                                        </h3>
+
+                                        {project.stats && (
+                                            <div className="mb-4 inline-block px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-white/90">
+                                                🚀 {project.stats}
+                                            </div>
+                                        )}
 
                                         <p className="text-white/60 text-sm leading-relaxed">
-                                            {project.desc}
+                                            {project.description}
                                         </p>
+
+                                        {project.clientName && (
+                                            <p className="text-white/40 text-xs mt-3">
+                                                Cliente: {project.clientName}
+                                            </p>
+                                        )}
                                     </div>
                                 </Card>
                             </motion.div>
