@@ -37,7 +37,7 @@ export function Hero() {
                             }
                         }
                     }}
-                    className="space-y-6 max-w-3xl relative z-10"
+                    className="space-y-6 max-w-3xl relative z-40"
                 >
                     <motion.div
                         variants={{
