@@ -1,19 +1,19 @@
 {
     "Metadata": {
-        "title": "Matías Jaubet | Web Development & AI - Professional Digital Solutions",
-        "description": "Professional web development and AI automation to boost your business. Fast websites, smart chatbots, and automations that save you time and money.",
-        "keywords": "web development, artificial intelligence, chatbots, automation, n8n, professional websites, AI for business, frontend development",
+        "title": "Matías Jaubet | Senior AI Engineer - AI Integration for Businesses",
+        "description": "Senior AI Engineer specialized in integrating Artificial Intelligence into businesses. Smart apps, AI assistants, automations, and process optimization. Your business needs AI, I'm the solution.",
+        "keywords": "senior ai engineer, artificial intelligence, AI integration business, GPT-4 chatbots, AI automation, AI consultant, AI development, intelligent assistants",
         "author": "Matías Jaubet",
-        "og_title": "Matías Jaubet | Web Development & AI",
-        "og_description": "Webs that Sell. AI that Works. We combine solid web development with Artificial Intelligence to reduce costs, time, and headaches.",
+        "og_title": "Matías Jaubet | Senior AI Engineer",
+        "og_description": "Your business needs AI. I'm the solution. Apps, assistants, automations, and optimization with Artificial Intelligence. Measurable results, not promises.",
         "og_type": "website",
-        "og_site_name": "Matías Jaubet Web & AI",
+        "og_site_name": "Matías Jaubet - Senior AI Engineer",
         "twitter_card": "summary_large_image",
-        "twitter_title": "Matías Jaubet | Web Development & AI",
-        "twitter_description": "Professional web development and AI automation. Fast websites, smart chatbots, and automations for your business."
+        "twitter_title": "Matías Jaubet | Senior AI Engineer",
+        "twitter_description": "Senior AI Engineer specialized in integrating AI into businesses. Apps, assistants, automations, and process optimization with measurable results."
     },
     "Navbar": {
-        "brand_subtitle": "Web & AI",
+        "brand_subtitle": "Senior AI Engineer",
         "services": "Services",
         "projects": "Projects",
         "plans": "Plans",
@@ -22,61 +22,69 @@
         "cta": "Let's Talk"
     },
     "Hero": {
-        "badge": "Your tech partner that solves your life",
-        "title_start": "Webs that Sell.",
-        "title_grad": "AI that Works.",
-        "desc": "We combine solid web development with Artificial Intelligence to reduce costs, time, and headaches. You take care of the business, technology is my problem.",
-        "cta_primary": "Start Now",
-        "cta_secondary": "View Portfolio"
+        "badge": "Senior AI Engineer | Your AI Technology Partner",
+        "title_start": "Your Business Needs AI.",
+        "title_grad": "I'm the Solution.",
+        "desc": "I'm Matías, Senior AI Engineer. I help businesses integrate Artificial Intelligence intelligently: apps, assistants, automations, websites, and hosting. I don't sell technology, I deliver results. I handle everything.",
+        "cta_primary": "Let's talk about your project",
+        "cta_secondary": "See my experience"
     },
     "PainPoints": {
-        "title_start": "Tired of struggling with",
-        "title_highlight": "technology?",
-        "desc": "I know how frustrating it is to want to digitize your business and encounter obstacles, delays, and hidden costs.",
+        "title_start": "Your business needs AI but",
+        "title_highlight": "don't know where to start?",
+        "desc": "AI isn't the future, it's the present. But implementing it wrong can cost you time, money, and credibility. I help you do it right.",
         "cards": {
             "1": {
-                "title": "Slow or Down Sites",
-                "desc": "You lose sales when your website won't load or breaks at the worst moment."
+                "title": "Poorly Implemented AI",
+                "desc": "Chatbots that frustrate customers, automations that fail, investments with no ROI. Bad AI is worse than having nothing."
             },
             "2": {
-                "title": "Ghost Developers",
-                "desc": "They start the project and disappear. Or speak in technical jargon when you ask for a change."
+                "title": "Providers Who Don't Understand Your Business",
+                "desc": "They sell you generic solutions that don't fit your reality. You need someone who thinks strategically, not just an executor."
             },
             "3": {
-                "title": "Unaffordable Budgets",
-                "desc": "Agencies quoting fortunes for websites you could have running in days."
+                "title": "Fear of Falling Behind",
+                "desc": "Your competition is already using AI. Every day without integrating it is a lost opportunity to optimize, scale, and bill more."
             }
         },
-        "solution_title": "My proposal is simple:",
-        "solution_desc_start": "Real human support, scalable technology, and",
-        "solution_desc_bold": "logical prices thanks to AI."
+        "solution_title": "My proposal:",
+        "solution_desc_start": "Consulting + Implementation + Support.",
+        "solution_desc_bold": "I'm the product. You get results."
     },
     "Services": {
-        "title_start": "Real Solutions",
-        "title_grad": "No Jargon",
-        "desc": "I don't sell code, I sell free time and tools to bill more.",
+        "title_start": "What I Do",
+        "title_grad": "For You",
+        "desc": "I'm not a service provider. I'm your external Senior AI Engineer. I think, design, develop, and maintain AI solutions for your business.",
         "cards": {
             "1": {
-                "title": "Professional Websites",
-                "desc": "Your digital storefront open 24/7. Fast, secure, and self-manageable webs. You don't depend on me to change a photo."
+                "title": "Intelligent AI Apps",
+                "desc": "I develop web and mobile applications that integrate AI natively. From conversational assistants to recommendation systems. Stack: Next.js, React, GPT-4, Claude."
             },
             "2": {
-                "title": "Chatbots & 24/7 Support",
-                "desc": "I configure smart bots that answer questions, schedule appointments, and sell while you sleep. Stop losing clients by not answering."
+                "title": "Advanced Assistants & Chatbots",
+                "desc": "Not FAQ bots. Assistants that understand context, learn from interactions, and solve real problems. Integrated with your systems (CRM, ERP, databases)."
             },
             "3": {
-                "title": "Automation (n8n)",
-                "desc": "Digital employees doing the boring work. Invoicing, lead tracking, social media posts... all automatic."
+                "title": "Intelligent Automation",
+                "desc": "Digital employees working 24/7. From email automation to AI data analysis. Stack: n8n, Make, Python, AI APIs (OpenAI, Anthropic)."
             },
             "4": {
+                "title": "Consulting + Implementation",
+                "desc": "I help you identify where AI can give you real ROI. We design the strategy together and I execute it. I don't leave you alone with a PowerPoint."
+            },
+            "5": {
+                "title": "Process Optimization",
+                "desc": "I analyze your workflows and optimize them with AI. Reduced operational costs, improved response times, scalability without hiring more people."
+            },
+            "6": {
                 "title": "Hosting & Maintenance",
-                "desc": "I ensure it never goes down. Backups, updates, and security so you sleep consistently."
+                "desc": "Every solution I develop, I host and maintain. Optimized servers, 24/7 monitoring, updates, and technical support. Sleep peacefully."
             }
         }
     },
     "ServicesPage": {
-        "meta_title": "Services | Matías Web & AI",
-        "meta_description": "Professional web development, smart chatbots, automation, and hosting. Real tech solutions without jargon to grow your business."
+        "meta_title": "Services | Matías Jaubet - Senior AI Engineer",
+        "meta_description": "Smart apps, AI assistants, automation, consulting, and hosting. Artificial Intelligence integration for businesses with measurable results."
     },
     "Pricing": {
         "title_start": "Investment",
@@ -121,10 +129,10 @@
         }
     },
     "Portfolio": {
-        "title_start": "Results",
-        "title_grad": "Real",
-        "desc": "No theory here. Just businesses billing more and owners sleeping better.",
-        "link": "View all projects",
+        "title_start": "Real",
+        "title_grad": "Experience",
+        "desc": "No made-up cases. Real businesses, measurable results. Full projects are uploaded by you to Strapi.",
+        "link": "View all my projects",
         "cases": {
             "1": {
                 "category": "Institutional Web",
@@ -147,11 +155,11 @@
         }
     },
     "Projects": {
-        "meta_title": "Projects | Matías Web & AI",
-        "meta_description": "Explore our project portfolio: professional websites, smart chatbots, automations, and hosting. Real results for real businesses.",
-        "title_start": "Our",
+        "meta_title": "Projects | Matías Jaubet - Senior AI Engineer",
+        "meta_description": "AI projects portfolio: smart apps, assistants, automations, and process optimization. Real results for real businesses.",
+        "title_start": "My",
         "title_grad": "Projects",
-        "desc": "Explore the projects we've developed for our clients. Each one with measurable results and cutting-edge technology.",
+        "desc": "Real AI integration projects for businesses. Each one with measurable results and cutting-edge technology.",
         "projects": {
             "1": {
                 "category": "Institutional Web",
@@ -174,27 +182,27 @@
         }
     },
     "Process": {
-        "meta_title": "Work Process | Matías Web & AI",
-        "meta_description": "Discover how we work: diagnosis, proposal, execution, and delivery. A simple, fast, and headache-free process for your digital project.",
-        "title_start": "How We",
-        "title_grad": "Work?",
-        "desc": "Simple, fast, and headache-free. I eliminated bureaucracy so we can move fast.",
+        "meta_title": "How I Work | Matías Jaubet - Senior AI Engineer",
+        "meta_description": "Clear methodology to integrate AI in your business: strategic diagnosis, technical proposal, development and implementation, delivery and continuous support.",
+        "title_start": "How I",
+        "title_grad": "Work",
+        "desc": "Clear methodology, constant communication, measurable results. This is how I work with every client.",
         "steps": {
             "1": {
-                "title": "Diagnosis",
-                "desc": "We chat for 15 minutes. You tell me what hurts and I tell you if I can cure it. Straightforward."
+                "title": "1. Strategic Diagnosis",
+                "desc": "30-45 min call to understand your business, processes, and where AI can give you real ROI. I don't sell generic solutions."
             },
             "2": {
-                "title": "Proposal",
-                "desc": "I pass you an action plan and a closed price. No 'surprise costs' halfway through."
+                "title": "2. Technical + Commercial Proposal",
+                "desc": "I present a detailed action plan: what we'll do, with which technologies, timelines, and costs. Everything closed, no surprises."
             },
             "3": {
-                "title": "Execution",
-                "desc": "I get to work. You continue with yours. In a few days I show you real progress."
+                "title": "3. Development & Implementation",
+                "desc": "I get to work. You have access to a dashboard where you see progress in real-time. Weekly progress meetings."
             },
             "4": {
-                "title": "Delivery & Party",
-                "desc": "I deliver everything working, teach you how to use it, and we toast (virtually). I don't abandon you there."
+                "title": "4. Delivery, Training & Support",
+                "desc": "I deliver everything working, train you and your team, and remain available for support and continuous improvements. I don't abandon you."
             }
         }
     },
@@ -203,7 +211,7 @@
         "testimonials_title_grad": "clients say",
         "faq_title_start": "Frequently Asked",
         "faq_title_grad": "Questions",
-        "faq_subtitle": "I answer the most common questions so you can decide with confidence.",
+        "faq_subtitle": "The questions everyone asks me before starting.",
         "testimonials": {
             "1": {
                 "quote": "Matías always answers. That's gold to me. The web turned out incredible and paid for itself in two months.",
@@ -238,26 +246,34 @@
         },
         "faqs": {
             "1": {
-                "q": "Do I need to know technology?",
-                "a": "Nothing. Zero. That's what I'm here for. You take care of your business, I ensure all tech works."
+                "q": "What makes you different from other AI developers?",
+                "a": "I'm not just an executor. I'm a consultant + developer. I think through the AI strategy for your business and implement it. Plus, I handle hosting and maintenance. I'm your external Senior AI Engineer."
             },
             "2": {
-                "q": "What happens if something breaks?",
-                "a": "Hard to happen, but if it does, you have warranty. And if you hire maintenance, I fix it before you notice."
+                "q": "What AI technologies do you use?",
+                "a": "Depends on the project. I work with GPT-4, Claude, Gemini, Llama for LLMs. n8n and Make for automations. Next.js, React, Python for development. Vector databases for RAG. I choose the best tool for each case."
             },
             "3": {
-                "q": "How long does it take?",
-                "a": "Depends on project. A Landing Page can be in 1 week. Complex system, 3 or 4. But I always meet dates."
+                "q": "How much does it cost to integrate AI into my business?",
+                "a": "Depends on scope. I can start with an MVP in 2-3 weeks for USD 2,000-3,000. More complex projects can range from USD 5,000 to 15,000. Always with closed pricing and projected ROI."
             },
             "4": {
-                "q": "Is it expensive to maintain?",
-                "a": "No. I look for scalable solutions that don't bleed you dry. I'll offer what you need, nothing more, nothing less."
+                "q": "Do you offer only development or also consulting?",
+                "a": "Both. I can help you define the AI strategy (consulting) or implement it directly (development). Ideally both: we think together and I execute."
+            },
+            "5": {
+                "q": "Do you work alone or have a team?",
+                "a": "I work solo on most projects. For large projects, I assemble teams with trusted collaborators. But I always lead technically and face the client."
+            },
+            "6": {
+                "q": "What happens after delivery?",
+                "a": "I offer maintenance and support plans. They include hosting, updates, monitoring, and continuous improvements. AI isn't 'set and forget', it needs constant adjustment and optimization."
             }
         }
     },
     "Footer": {
-        "desc": "Front End Developer & Automation Specialist. Helping businesses scale with real technology.",
-        "rights": "Matías Web & IA. All rights reserved.",
+        "desc": "Senior AI Engineer specialized in integrating Artificial Intelligence into businesses. Apps, assistants, automations, websites, and hosting. Your business needs AI, I'm the solution.",
+        "rights": "Matías Jaubet - Senior AI Engineer. All rights reserved.",
         "form_title": "Let's Talk?",
         "form_subtitle": "Leave me your details and I'll write you. No obligation.",
         "label_name": "Name",
@@ -286,8 +302,8 @@
         }
     },
     "FAQ": {
-        "meta_title": "Frequently Asked Questions | Matías Web & AI",
-        "meta_description": "Get answers to your questions about web development, chatbots, automation, and more. Everything you need to know before starting your project."
+        "meta_title": "Frequently Asked Questions | Matías Jaubet - Senior AI Engineer",
+        "meta_description": "Get answers to your questions about AI integration, smart apps, assistants, automation, and more. Everything you need to know before starting your AI project."
     },
     "Breadcrumbs": {
         "home": "Home",

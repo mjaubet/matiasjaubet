@@ -3,7 +3,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
-import { Globe, Bot, Workflow, Server } from "lucide-react"
+import { Globe, Bot, Workflow, Server, Lightbulb, TrendingUp } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { AnimationWrapper, StaggerContainer, staggerItem } from "@/components/ui/animation-wrapper"
@@ -28,9 +28,19 @@ export function Services() {
             desc: t("cards.3.desc")
         },
         {
-            icon: Server,
+            icon: Lightbulb,
             title: t("cards.4.title"),
             desc: t("cards.4.desc")
+        },
+        {
+            icon: TrendingUp,
+            title: t("cards.5.title"),
+            desc: t("cards.5.desc")
+        },
+        {
+            icon: Server,
+            title: t("cards.6.title"),
+            desc: t("cards.6.desc")
         }
     ]
 
@@ -48,7 +58,7 @@ export function Services() {
                 </div>
             </AnimationWrapper>
 
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {services.map((service, idx) => (
                     <motion.div key={idx} variants={staggerItem}>
                         <Card className="hover:bg-white/5 transition-all group border-white/5 h-full">

@@ -1,19 +1,19 @@
 {
     "Metadata": {
-        "title": "Matías Jaubet | Desarrollo Web & IA - Soluciones Digitales Profesionales",
-        "description": "Desarrollo web profesional y automatización con IA para potenciar tu negocio. Sitios web rápidos, chatbots inteligentes y automatizaciones que te ahorran tiempo y dinero.",
-        "keywords": "desarrollo web, inteligencia artificial, chatbots, automatización, n8n, sitios web profesionales, IA para negocios, desarrollo frontend",
+        "title": "Matías Jaubet | Senior AI Engineer - Integración de IA para Empresas",
+        "description": "Senior AI Engineer especializado en integrar Inteligencia Artificial en empresas. Apps inteligentes, asistentes con IA, automatizaciones y optimización de procesos. Tu negocio necesita IA, yo soy la solución.",
+        "keywords": "senior ai engineer, inteligencia artificial, integración IA empresas, chatbots GPT-4, automatización IA, consultor IA, desarrollo IA, asistentes inteligentes",
         "author": "Matías Jaubet",
-        "og_title": "Matías Jaubet | Desarrollo Web & IA",
-        "og_description": "Webs que venden. IA que trabaja. Combinamos desarrollo web sólido con Inteligencia Artificial para reducir costos, tiempos y dolores de cabeza.",
+        "og_title": "Matías Jaubet | Senior AI Engineer",
+        "og_description": "Tu empresa necesita IA. Yo soy la solución. Apps, asistentes, automatizaciones y optimización con Inteligencia Artificial. Resultados medibles, no promesas.",
         "og_type": "website",
-        "og_site_name": "Matías Jaubet Web & IA",
+        "og_site_name": "Matías Jaubet - Senior AI Engineer",
         "twitter_card": "summary_large_image",
-        "twitter_title": "Matías Jaubet | Desarrollo Web & IA",
-        "twitter_description": "Desarrollo web profesional y automatización con IA. Sitios web rápidos, chatbots inteligentes y automatizaciones para tu negocio."
+        "twitter_title": "Matías Jaubet | Senior AI Engineer",
+        "twitter_description": "Senior AI Engineer especializado en integrar IA en empresas. Apps, asistentes, automatizaciones y optimización de procesos con resultados medibles."
     },
     "Navbar": {
-        "brand_subtitle": "Web & IA",
+        "brand_subtitle": "Senior AI Engineer",
         "services": "Servicios",
         "projects": "Proyectos",
         "plans": "Planes",
@@ -22,61 +22,69 @@
         "cta": "Hablemos"
     },
     "Hero": {
-        "badge": "Tu socio tecnológico que te resuelve la vida",
-        "title_start": "Webs que Venden.",
-        "title_grad": "IA que Trabaja.",
-        "desc": "Combinamos desarrollo web sólido con Inteligencia Artificial para reducir costos, tiempos y dolores de cabeza. Vos ocupate del negocio, la tecnología es problema mío.",
-        "cta_primary": "Empezar ahora",
-        "cta_secondary": "Ver trabajos realizados"
+        "badge": "Senior AI Engineer | Tu Socio Tecnológico en IA",
+        "title_start": "Tu Empresa Necesita IA.",
+        "title_grad": "Yo Soy la Solución.",
+        "desc": "Soy Matías, Senior AI Engineer. Ayudo a empresas a integrar Inteligencia Artificial de forma inteligente: apps, asistentes, automatizaciones, webs y hosting. No vendo tecnología, vendo resultados. Yo me ocupo de todo.",
+        "cta_primary": "Hablemos de tu proyecto",
+        "cta_secondary": "Ver mi experiencia"
     },
     "PainPoints": {
-        "title_start": "¿Cansado de renegar con",
-        "title_highlight": "la tecnología?",
-        "desc": "Sé lo frustrante que es querer digitalizar tu negocio y encontrarte con trabas, demoras y costos ocultos.",
+        "title_start": "¿Tu empresa necesita IA pero",
+        "title_highlight": "no sabés por dónde empezar?",
+        "desc": "La IA no es el futuro, es el presente. Pero implementarla mal te puede costar tiempo, dinero y credibilidad. Yo te ayudo a hacerlo bien.",
         "cards": {
             "1": {
-                "title": "Sitios lentos o caídos",
-                "desc": "Perdés ventas cuando tu web no carga o se vive rompiendo en el peor momento."
+                "title": "IA mal implementada",
+                "desc": "Chatbots que frustran clientes, automatizaciones que fallan, inversiones que no dan ROI. La IA mal hecha es peor que no tener nada."
             },
             "2": {
-                "title": "Developers fantasmas",
-                "desc": "Empiezan el proyecto y desaparecen. O te hablan en chino cuando pedís un cambio."
+                "title": "Proveedores que no entienden tu negocio",
+                "desc": "Te venden soluciones genéricas que no se adaptan a tu realidad. Necesitás alguien que piense estratégicamente, no un ejecutor."
             },
             "3": {
-                "title": "Presupuestos impagables",
-                "desc": "Agencias que cotizan fortunas por webs que podrías tener funcionando en días."
+                "title": "Miedo a quedarte atrás",
+                "desc": "Tu competencia ya está usando IA. Cada día que pasa sin integrarla es una oportunidad perdida de optimizar, escalar y facturar más."
             }
         },
-        "solution_title": "Mi propuesta es simple:",
-        "solution_desc_start": "Soporte humano real, tecnología que escala y",
-        "solution_desc_bold": "precios lógicos gracias a la IA."
+        "solution_title": "Mi propuesta:",
+        "solution_desc_start": "Consultoría + Implementación + Soporte.",
+        "solution_desc_bold": "Yo soy el producto. Vos obtenés resultados."
     },
     "Services": {
-        "title_start": "Soluciones Reales",
-        "title_grad": "Sin Tecnicismos",
-        "desc": "No te vendo código, te vendo tiempo libre y herramientas para facturar más.",
+        "title_start": "Qué Hago",
+        "title_grad": "Por Vos",
+        "desc": "No soy un proveedor de servicios. Soy tu Senior AI Engineer externo. Pienso, diseño, desarrollo y mantengo soluciones de IA para tu empresa.",
         "cards": {
             "1": {
-                "title": "Sitios Web Profesionales",
-                "desc": "Tu vidriera digital abierta 24/7. Webs rápidas, seguras y autoadministrables. No dependés de mí para cambiar una foto."
+                "title": "Apps Inteligentes con IA",
+                "desc": "Desarrollo aplicaciones web y móviles que integran IA de forma nativa. Desde asistentes conversacionales hasta sistemas de recomendación. Stack: Next.js, React, GPT-4, Claude."
             },
             "2": {
-                "title": "Chatbots & Atención 24/7",
-                "desc": "Configuro bots inteligentes que responden dudas, agendan turnos y venden mientras vos dormís. Basta de perder clientes por no contestar."
+                "title": "Asistentes y Chatbots Avanzados",
+                "desc": "No son bots de FAQ. Son asistentes que entienden contexto, aprenden de interacciones y resuelven problemas reales. Integrados con tus sistemas (CRM, ERP, bases de datos)."
             },
             "3": {
-                "title": "Automatización (n8n)",
-                "desc": "Empleados digitales que hacen el trabajo aburrido. Facturación, seguimiento de leads, posteos en redes... todo automático."
+                "title": "Automatización Inteligente",
+                "desc": "Empleados digitales que trabajan 24/7. Desde automatización de emails hasta análisis de datos con IA. Stack: n8n, Make, Python, APIs de IA (OpenAI, Anthropic)."
             },
             "4": {
-                "title": "Hosting & Mantenimiento",
-                "desc": "Yo me ocupo de que no se caiga nunca. Copias de seguridad, actualizaciones y seguridad para que duermas tranquilo."
+                "title": "Consultoría + Implementación",
+                "desc": "Te ayudo a identificar dónde la IA puede darte ROI real. Diseñamos la estrategia juntos y yo la ejecuto. No te dejo solo con un PowerPoint."
+            },
+            "5": {
+                "title": "Optimización de Procesos",
+                "desc": "Analizo tus flujos de trabajo y los optimizo con IA. Reducción de costos operativos, mejora de tiempos de respuesta, escalabilidad sin contratar más gente."
+            },
+            "6": {
+                "title": "Hosting y Mantenimiento",
+                "desc": "Toda solución que desarrollo la hosteo y mantengo. Servidores optimizados, monitoreo 24/7, actualizaciones y soporte técnico. Dormís tranquilo."
             }
         }
     },
     "ServicesPage": {
-        "meta_title": "Servicios | Matías Web & IA",
-        "meta_description": "Desarrollo web profesional, chatbots inteligentes, automatización y hosting. Soluciones tecnológicas reales sin tecnicismos para hacer crecer tu negocio."
+        "meta_title": "Servicios | Matías Jaubet - Senior AI Engineer",
+        "meta_description": "Apps inteligentes, asistentes con IA, automatización, consultoría y hosting. Integración de Inteligencia Artificial para empresas con resultados medibles."
     },
     "Pricing": {
         "title_start": "Inversión",
@@ -121,10 +129,10 @@
         }
     },
     "Portfolio": {
-        "title_start": "Resultados",
-        "title_grad": "Reales",
-        "desc": "Acá no hay teoría. Hay negocios que facturan más y dueños que duermen mejor.",
-        "link": "Ver todos los proyectos",
+        "title_start": "Experiencia",
+        "title_grad": "Real",
+        "desc": "No hay casos inventados. Empresas reales, resultados medibles. Los proyectos completos los subís vos a Strapi.",
+        "link": "Ver todos mis proyectos",
         "cases": {
             "1": {
                 "category": "Web Institucional",
@@ -147,11 +155,11 @@
         }
     },
     "Projects": {
-        "meta_title": "Proyectos | Matías Web & IA",
-        "meta_description": "Explora nuestro portfolio de proyectos: webs profesionales, chatbots inteligentes, automatizaciones y hosting. Resultados reales para negocios reales.",
-        "title_start": "Nuestros",
+        "meta_title": "Proyectos | Matías Jaubet - Senior AI Engineer",
+        "meta_description": "Portfolio de proyectos de IA: apps inteligentes, asistentes, automatizaciones y optimización de procesos. Resultados reales para empresas reales.",
+        "title_start": "Mis",
         "title_grad": "Proyectos",
-        "desc": "Explora los proyectos que hemos desarrollado para nuestros clientes. Cada uno con resultados medibles y tecnología de punta.",
+        "desc": "Proyectos reales de integración de IA en empresas. Cada uno con resultados medibles y tecnología de punta.",
         "projects": {
             "1": {
                 "category": "Web Institucional",
@@ -174,27 +182,27 @@
         }
     },
     "Process": {
-        "meta_title": "Proceso de Trabajo | Matías Web & IA",
-        "meta_description": "Descubre cómo trabajamos: diagnóstico, propuesta, ejecución y entrega. Un proceso simple, rápido y sin dolores de cabeza para tu proyecto digital.",
-        "title_start": "¿Cómo",
-        "title_grad": "Trabajamos?",
-        "desc": "Simple, rápido y sin dolores de cabeza. Eliminé la burocracia para que podamos avanzar rápido.",
+        "meta_title": "Cómo Trabajo | Matías Jaubet - Senior AI Engineer",
+        "meta_description": "Metodología clara para integrar IA en tu empresa: diagnóstico estratégico, propuesta técnica, desarrollo e implementación, entrega y soporte continuo.",
+        "title_start": "Cómo",
+        "title_grad": "Trabajo",
+        "desc": "Metodología clara, comunicación constante, resultados medibles. Así trabajo con cada cliente.",
         "steps": {
             "1": {
-                "title": "Diagnóstico",
-                "desc": "Charlamos 15 minutos. Me contás qué te duele y yo te digo si puedo curarlo. Sin vueltas."
+                "title": "1. Diagnóstico Estratégico",
+                "desc": "Llamada de 30-45 min para entender tu negocio, tus procesos y dónde la IA puede darte ROI real. No vendo soluciones genéricas."
             },
             "2": {
-                "title": "Propuesta",
-                "desc": "Te paso un plan de acción y un precio cerrado. Nada de 'costos sorpresa' a mitad de camino."
+                "title": "2. Propuesta Técnica + Comercial",
+                "desc": "Te presento un plan de acción detallado: qué vamos a hacer, con qué tecnologías, en qué tiempos y a qué costo. Todo cerrado, sin sorpresas."
             },
             "3": {
-                "title": "Ejecución",
-                "desc": "Me pongo a trabajar. Vos seguí con lo tuyo. En pocos días te muestro avances reales."
+                "title": "3. Desarrollo e Implementación",
+                "desc": "Me pongo a trabajar. Tenés acceso a un dashboard donde ves el progreso en tiempo real. Reuniones semanales de avance."
             },
             "4": {
-                "title": "Entrega y Fiesta",
-                "desc": "Te entrego todo funcionando, te enseño a usarlo y brindamos (virtualmente). No te abandono ahí."
+                "title": "4. Entrega, Capacitación y Soporte",
+                "desc": "Te entrego todo funcionando, te capacito a vos y tu equipo, y quedo disponible para soporte y mejoras continuas. No te abandono."
             }
         }
     },
@@ -203,7 +211,7 @@
         "testimonials_title_grad": "mis clientes",
         "faq_title_start": "Preguntas",
         "faq_title_grad": "Frecuentes",
-        "faq_subtitle": "Resuelvo las dudas más comunes para que puedas decidir con confianza.",
+        "faq_subtitle": "Las preguntas que todos me hacen antes de arrancar.",
         "testimonials": {
             "1": {
                 "quote": "Matías siempre contesta. Eso para mí vale oro. La web quedó increíble y se pagó sola en dos meses.",
@@ -238,26 +246,34 @@
         },
         "faqs": {
             "1": {
-                "q": "¿Tengo que saber de tecnología?",
-                "a": "Nada. Cero. Para eso estoy yo. Vos ocupate de tu negocio, yo me encargo de que todo lo técnico funcione."
+                "q": "¿Qué te diferencia de otros desarrolladores de IA?",
+                "a": "No soy solo un ejecutor. Soy consultor + desarrollador. Pienso la estrategia de IA para tu negocio y la implemento. Además, me hago cargo del hosting y mantenimiento. Soy tu Senior AI Engineer externo."
             },
             "2": {
-                "q": "¿Qué pasa si se rompe algo?",
-                "a": "Dificil que pase, pero si pasa, tenés garantía. Y si contratas el mantenimiento, yo lo arreglo antes de que te des cuenta."
+                "q": "¿Qué tecnologías de IA usás?",
+                "a": "Depende del proyecto. Trabajo con GPT-4, Claude, Gemini, Llama para LLMs. n8n y Make para automatizaciones. Next.js, React, Python para desarrollo. Bases vectoriales para RAG. Elijo la mejor herramienta para cada caso."
             },
             "3": {
-                "q": "¿Cuánto tardás?",
-                "a": "Depende el proyecto. Una Landing Page puede estar en 1 semana. Un sistema complejo, 3 o 4. Pero siempre cumplo las fechas."
+                "q": "¿Cuánto cuesta integrar IA en mi empresa?",
+                "a": "Depende del alcance. Puedo arrancar con un MVP en 2-3 semanas por USD 2.000-3.000. Proyectos más complejos pueden ir de USD 5.000 a 15.000. Siempre con precio cerrado y ROI proyectado."
             },
             "4": {
-                "q": "¿Es muy caro mantener esto?",
-                "a": "No. Busco soluciones que escalen sin que te desangren. Te voy a ofrecer lo que necesites, ni más ni menos."
+                "q": "¿Ofrecés solo desarrollo o también consultoría?",
+                "a": "Ambas. Puedo ayudarte a definir la estrategia de IA (consultoría) o implementarla directamente (desarrollo). Lo ideal es hacer ambas: pensamos juntos y yo ejecuto."
+            },
+            "5": {
+                "q": "¿Trabajás solo o tenés equipo?",
+                "a": "Trabajo solo en la mayoría de proyectos. Para proyectos grandes, armo equipos con colaboradores de confianza. Pero siempre soy yo quien lidera técnicamente y te da la cara."
+            },
+            "6": {
+                "q": "¿Qué pasa después de la entrega?",
+                "a": "Ofrezco planes de mantenimiento y soporte. Incluyen hosting, actualizaciones, monitoreo y mejoras continuas. La IA no es 'set and forget', necesita ajustes y optimización constante."
             }
         }
     },
     "Footer": {
-        "desc": "Desarrollador Front End & Especialista en Automatización. Ayudo a negocios a escalar con tecnología real.",
-        "rights": "Matías Web & IA. Todos los derechos reservados.",
+        "desc": "Senior AI Engineer especializado en integrar Inteligencia Artificial en empresas. Apps, asistentes, automatizaciones, webs y hosting. Tu negocio necesita IA, yo soy la solución.",
+        "rights": "Matías Jaubet - Senior AI Engineer. Todos los derechos reservados.",
         "form_title": "¿Hablamos?",
         "form_subtitle": "Dejame tus datos y te escribo. Sin compromiso.",
         "label_name": "Nombre",
@@ -286,8 +302,8 @@
         }
     },
     "FAQ": {
-        "meta_title": "Preguntas Frecuentes | Matías Web & IA",
-        "meta_description": "Resuelvo tus dudas sobre desarrollo web, chatbots, automatización y más. Todo lo que necesitás saber antes de empezar tu proyecto."
+        "meta_title": "Preguntas Frecuentes | Matías Jaubet - Senior AI Engineer",
+        "meta_description": "Resuelvo tus dudas sobre integración de IA, apps inteligentes, asistentes, automatización y más. Todo lo que necesitás saber antes de empezar tu proyecto de IA."
     },
     "Breadcrumbs": {
         "home": "Inicio",
